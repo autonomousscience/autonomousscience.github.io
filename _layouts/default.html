@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    {% include head.html %}
+</head>
+
+<body class="is-preload dark">
+    {% include header.html %}
+
+    <section id="hero" class="hero sticked-header-offset">
+        <div id="particles-js"></div>
+        <div id="repulse-circle-div"></div>
+        <div class="container position-relative">
+            <div class="row gy-5 aos-init aos-animate">
+                <div class="col-lg-7 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <h2 data-aos="fade-up">Accelerating Discovery, <span>Automating Tomorrow</span><span class="circle"
+                            data-aos="fade-right" data-aos-delay="800">.</span></h2>
+                    <p data-aos="fade-up" data-aos-delay="400">Forging a collaborative frontier where human scientific
+                        intuition and creativity converge with autonomous systems to transform research across academia,
+                        industry, and national laboratories for unprecedented scientific advancement</p>
+                    <div class="social" data-aos="fade-up" data-aos-delay="600">
+                        <!-- <a href="https://www.youtube.com/channel/UCqCnXqWqKe9vF6cqKOj1CYw" target="_blank">
+                            <i class="fab fa-youtube" style="font-size: 1.5em; color: #fff !important"></i>
+                        </a> -->
+                        <a href="mailto:contact@autonomousscience.org">
+                            <i class="fa fa-envelope" style="font-size: 1.5em; color: #fff !important"></i>
+                        </a>
+                        <!-- <a href="https://linkedin.com/company/workflows-community" target="_blank">
+                            <i class="fab fa-linkedin" style="font-size: 1.5em; color: #fff !important"></i>
+                        </a>
+                        <a href="https://join.slack.com/t/workflowscommunity/shared_invite/zt-1s8u3ocgm-gNdsgRJgy6O2GNSFUf9eDQ"
+                            target="_blank">
+                            <i class="fab fa-slack" style="font-size: 1.5em; color: #fff !important"></i>
+                        </a> -->
+                    </div>
+                </div>
+                <div class="col-lg-5 dark-bg order-lg-1 d-flex flex-column justify-content-start text-left caption">
+                    <div style="border: 3px solid #fff; border-radius: .5em; padding: 1em;">
+                        <strong>COMING SOON</strong>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <main id="main" class="bg-light">
+        {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+</body>
+
+</html>
