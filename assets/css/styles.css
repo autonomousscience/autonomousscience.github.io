@@ -331,7 +331,7 @@ img:hover {
   inset: 0;
   z-index: 999999;
   overflow: hidden;
-  background: var(--color-primary);
+  background: #2e1a47;
   transition: all 0.6s ease-out;
 }
 
@@ -341,7 +341,7 @@ img:hover {
   top: calc(48% - 3px);
   left: calc(48% - 3px);
   border: 2px solid #fff;
-  border-color: var(--light-color) transparent var(--light-color) transparent;
+  border-color: #fff transparent #fff transparent;
   border-radius: 50%;
   width: 60px;
   height: 60px;
