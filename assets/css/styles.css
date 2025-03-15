@@ -3331,7 +3331,7 @@ canvas{
 
 
 .footer-section {
-  background: url(../images/hero-bg.png) center left;
+  /* background: url(../images/hero-bg.png) center left; */
   background-size: cover;
   padding: 60px 0;
   border-radius: 0px;
