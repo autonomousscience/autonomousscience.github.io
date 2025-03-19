@@ -33,3 +33,12 @@
   institution: 
     image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTyxhJeL3NpHRZ48-Ngb6MwhAoTYTtJag9ZA&s
     link: https://www.jhuapl.edu/
+
+- first_name: Rob
+  last_name: Moore
+  link: https://www.ornl.gov/staff-profile/rob-g-moore-ii
+  expertise: 
+  photo: https://www.ornl.gov/sites/default/files/styles/staff_profile_image_style/public/2023-05/2023-P04990_4.jpg?h=c3e96bfc&itok=R-CxdlnV
+  institution: 
+    image: https://workflows.community/images/institutions/ornl.png
+    link: https://www.ornl.gov/
