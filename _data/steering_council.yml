@@ -51,3 +51,21 @@
   institution: 
     image: https://www.cmu.edu/brand/brand-guidelines/images/wordmarksquare-red-600x600.png
     link: https://www.cmu.edu/
+
+- first_name: Ian T.
+  last_name: Foster
+  link: https://www.anl.gov/profile/ian-t-foster
+  expertise:
+  photo: https://www.anl.gov/sites/www/files/styles/profile_teaser_square_350px/public/Ian%20Foster%20400x400.jpg?h=b91dd37f&itok=M4oLBQbY
+  institution:
+    image: https://www.alcf.anl.gov/sites/default/files/styles/large/public/2020-01/Argonne_cmyk_black.png?itok=-df89dHw
+    link: https://www.anl.gov/
+
+- first_name: Dionysios A.
+  last_name: Antonopoulos
+  link: https://www.anl.gov/profile/dionysios-a-antonopoulos
+  expertise:
+  photo: https://www.anl.gov/sites/www/files/styles/profile_teaser_square_350px/public/Antonopoulos%20Dionysios%2032642D8_web.JPG?itok=8fYkLHBg
+  institution:
+    image: https://www.alcf.anl.gov/sites/default/files/styles/large/public/2020-01/Argonne_cmyk_black.png?itok=-df89dHw
+    link: https://www.anl.gov/
