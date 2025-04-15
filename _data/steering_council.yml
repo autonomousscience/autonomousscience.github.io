@@ -69,3 +69,12 @@
   institution:
     image: https://www.alcf.anl.gov/sites/default/files/styles/large/public/2020-01/Argonne_cmyk_black.png?itok=-df89dHw
     link: https://www.anl.gov/
+
+- first_name: Mitra
+  last_name: Taheri
+  link: https://engineering.jhu.edu/dcg/about-pi/
+  expertise:
+  photo: https://engineering.jhu.edu/materials/wp-content/uploads/2021/06/mitra-site-300x300.jpg
+  institution:
+    image: https://www.dankoarlington.com/wp-content/uploads/2018/04/JHU-Logo-Flat.jpg
+    link: https://engineering.jhu.edu/materials/
