@@ -1590,12 +1590,12 @@ section {background: var(--light-color);}
   border-radius: 50px;
   transition: 0.3s;
   color: var(--text-white-color);
-  /* background: linear-gradient(45deg, var(--color-primary), var(--color-secondary)); */
-  background-color: #2E1A47;
+  background-color: #502881;
 }
 
 .btn-get-started:hover {
-  background: linear-gradient(45deg, var(--color-secondary), var(--color-primary));
+  background: #40196e;
+  border: 2px solid #502881;
   color: var(--text-white-color);
 }
 
