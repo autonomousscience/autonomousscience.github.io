@@ -187,12 +187,12 @@ section {
 .section-header h2 {
   font-size: 32px;
   position: relative;
-  color: var(--color-primary);
+  color: #502881;
 }
 
 .section-header p {
   margin-bottom: 0;
-  color: #b8651d;
+  color: #999;
 }
 
 img {

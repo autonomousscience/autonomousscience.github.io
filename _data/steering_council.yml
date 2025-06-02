@@ -82,8 +82,17 @@
 - first_name: Shantenu
   last_name: Jha
   link: https://www.pppl.gov/people/shantenu-jha
-  expertise: 
+  expertise: High-Performance Distributed Computing
   photo: https://www.pppl.gov/sites/g/files/toruqf286/files/styles/1x1_750w_750h/public/2024-05/20240514shantenu_jha5k6a9660_2.jpg?h=d55ea86e&itok=9VgfaYhG
   institution:
     image: https://w3.pppl.gov/communications/imagesStructured/Logos/PPPL/PPPL-LOGO-W-BALL-TRANSPARENT_1945_681.png
     link: https://www.pppl.gov/
+
+- first_name: Laura
+  last_name: Biven
+  link: 
+  expertise: Data Management
+  photo:
+  institution:
+    image: 
+    link:
