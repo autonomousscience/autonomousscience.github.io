@@ -92,7 +92,7 @@
   last_name: Biven
   link: 
   expertise: Data Management
-  photo:
+  photo: /images/laura-biven.jpg
   institution:
-    image: 
-    link:
+    image: https://www.jlab.org/sites/default/files/logo_2.png
+    link: https://www.jlab.org/
