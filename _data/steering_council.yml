@@ -96,3 +96,12 @@
   institution:
     image: https://www.jlab.org/sites/default/files/logo_2.png
     link: https://www.jlab.org/
+
+- first_name: Ben
+  last_name: Mintz
+  link: https://www.ornl.gov/staff-profile/ben-mintz
+  expertise: Interconnected Science
+  photo: /images/ben-mintz.jpg
+  institution:
+    image: https://workflows.community/images/institutions/ornl.png
+    link: https://www.ornl.gov/
