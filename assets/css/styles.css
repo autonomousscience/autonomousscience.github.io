@@ -3606,3 +3606,8 @@ tbody tr {
   line-height: 1.2;
   font-weight: unset;
 }
+
+table a {
+  color: #6f0499;
+  text-decoration: none;
+}
