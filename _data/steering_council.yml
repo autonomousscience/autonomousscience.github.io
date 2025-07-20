@@ -1,7 +1,7 @@
 - first_name: Rafael 
   last_name: Ferreira da Silva
   link: https://rafaelsilva.com
-  expertise: Scientific Workflows and Distributed Computing
+  expertise: <strong>Chair</strong><br />Scientific Workflows and Distributed Computing
   photo: https://rafaelsilva.com/assets/images/2022-rafael-ferreira-da-silva-high-resolution.jpg
   institution: 
     image: https://workflows.community/images/institutions/ornl.png
@@ -37,7 +37,7 @@
 - first_name: Rob
   last_name: Moore
   link: https://www.ornl.gov/staff-profile/rob-g-moore-ii
-  expertise: 
+  expertise: Laboratories of the Future
   photo: /images/rob-moore.jpg
   institution: 
     image: https://workflows.community/images/institutions/ornl.png
@@ -47,7 +47,7 @@
   last_name: Mayer
   link: https://www.cmu.edu/leadership/senior-admin/vp-bios/mayer-bio.html
   expertise: 
-  photo: https://www.cmu.edu/leadership/senior-admin/images/mayer_400x400_min_2023-min.jpg
+  photo: /images/theresa-mayer.jpg
   institution: 
     image: https://www.cmu.edu/brand/brand-guidelines/images/wordmarksquare-red-600x600.png
     link: https://www.cmu.edu/
@@ -105,3 +105,12 @@
   institution:
     image: https://workflows.community/images/institutions/ornl.png
     link: https://www.ornl.gov/
+
+- first_name: Neeraj
+  last_name: Kumar
+  link: https://www.pnnl.gov/people/neeraj-kumar-phd
+  expertise: Computational Chemistry (Applied Math)
+  photo: /images/neeraj-kumar.jpg
+  institution:
+    image: https://www.pnnl.gov/images/pnnl_logo_battelle.png
+    link: https://www.pnnl.gov/
