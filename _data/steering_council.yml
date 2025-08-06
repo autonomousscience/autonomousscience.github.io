@@ -91,7 +91,7 @@
 - first_name: Laura
   last_name: Biven
   link: 
-  expertise: Data Management
+  expertise: Chief Data Officer
   photo: /images/laura-biven.jpg
   institution:
     image: https://www.jlab.org/sites/default/files/logo_2.png
@@ -109,7 +109,7 @@
 - first_name: Neeraj
   last_name: Kumar
   link: https://www.pnnl.gov/people/neeraj-kumar-phd
-  expertise: Computational Chemistry (Applied Math)
+  expertise: Chief Data Scientist
   photo: /images/neeraj-kumar.jpg
   institution:
     image: https://www.pnnl.gov/images/pnnl_logo_battelle.png
