@@ -16,6 +16,9 @@ collections:
   workshops:
     output: true
     permalink: /workshops/:path/
+  bofs:
+    output: true
+    permalink: /bofs/:path/
 
 plugins:
   - jekyll-sitemap    # Adds sitemap to the website at /sitemap.xml
