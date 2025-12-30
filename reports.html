@@ -4,35 +4,40 @@ title: Reports
 permalink: /reports
 ---
 
-<div class="container text-center" data-aos="fade-up" style="padding: 4em 0; margin-bottom: 0;">
-    <h4><strong style="color: #db8e1b">Autonomous Science</strong> Community Reports</h4>
-    <p>Explore peer-contributed insights, findings, and advancements from our global community of autonomous science 
-        researchers and practitioners.</p>
-</div>
-
-<section id="recent-posts" class="recent-posts sections-bg">
-    <div class="container" data-aos="fade-up">
-        <div class="row gy-4">
-            {% assign reports = site.data.reports | sort: "date" | reverse %}
-            {% for r in reports %}
-            <div class="col-lg-4">
-                <article>
-                    <div class="post-img">
-                        <img src="/images/reports/{{r.image}}" alt="" class="img-fluid">
-                    </div>
-                    <p class="post-category">{{r.publisher}}</p>
-                    <h2 class="title">
-                        <a href="{{r.url}}" target="_blank">{{r.title}}</a>
-                    </h2>
-                    <div class="d-flex align-items-center">
-                        <div class="post-meta">
-                            <p class="post-author">{{r.subtitle}}</p>
-                            <p class="post-date">{{r.date | date: "%B %Y"}}</p>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            {% endfor %}
-        </div>
+<section class="section">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <h2 class="section-title">Community reports</h2>
+        <p class="section-intro">
+          Explore peer-contributed insights, findings, and advancements from the global autonomous science community.
+        </p>
+      </div>
+      <div class="card">
+        <h4>What you will find</h4>
+        <ul class="list-clean">
+          <li>Roadmaps and strategy briefs</li>
+          <li>Workshop and BoF summaries</li>
+          <li>Technical advances in agentic lab workflows</li>
+        </ul>
+      </div>
     </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid-3">
+      {% assign reports = site.data.reports | sort: "date" | reverse %}
+      {% for r in reports %}
+      <div class="card report-card">
+        <img src="/images/reports/{{r.image}}" alt="{{r.title}} cover" />
+        <p class="report-meta">{{r.publisher}}</p>
+        <h3><a href="{{r.url}}" target="_blank">{{r.title}}</a></h3>
+        <p class="text-muted">{{r.subtitle}}</p>
+        <p class="text-muted">{{r.date | date: "%B %Y"}}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </section>

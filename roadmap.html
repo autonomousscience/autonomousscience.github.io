@@ -4,135 +4,89 @@ title: Roadmap
 permalink: /roadmap
 ---
 
-<div class="container" data-aos="fade-up" style="padding: 3em 0;">
-    <div class="row">
-        <div class="col-lg-8 wg">
-            <p>
-                Scientific discovery is rapidly evolving through the integration of artificial intelligence, robotics,
-                and autonomous systems. However, many autonomous laboratories still operate in isolation, limiting
-                collaboration and slowing progress. This roadmap outlines a community-driven strategy to connect
-                capabilities across institutions, standardize interfaces for interoperability, and enable intelligent
-                orchestration of experiments and data. It identifies critical dimensions for building a cohesive
-                national infrastructure that supports distributed, automated, and reproducible science. The goal is to
-                accelerate the pace of discovery while expanding access to advanced scientific tools and methods.
-            </p>
-            <img src="/images/autonomous-science-overview.png" width="100%" />
-            
-            <br /><br />
-            
-            <section id="team" class="team sections-bg" style="border-radius: 0.5em; padding: 1em;">
-                <h4>Instrument and Cyberinfrastructure Integration</h4>
-                <p>Interconnecting autonomous laboratories requires agents to operate diverse scientific instruments and
-                    computational resources across institutional boundaries. This integration supports seamless
-                    workflows from data collection to analysis, enabling rapid, reproducible scientific discovery. Key
-                    challenges include heterogeneity of instruments, lack of standardized interfaces, and coordination
-                    of distributed resources.</p>
-                <ul>
-                    <li><strong>M1.</strong> Establish common integration interfaces for scientific instruments with
-                        vendor-agnostic hardware abstraction layers and API development via an Instrument API
-                        Consortium.</li>
-                    <li><strong>M2.</strong> Demonstrate end-to-end autonomous workflows across institutions for
-                        seamless experimental and computational resource orchestration through secure multi-domain
-                        cyberinfrastructure networks.</li>
-                    <li><strong>M3.</strong> Deploy federated cyberinfrastructure with standardized frameworks,
-                        fault-tolerant coordination mechanisms, and adaptive resource management with zero-trust
-                        security and physics-aware digital twins for workflow validation.</li>
-                    <li><strong>M4.</strong> Develop a scalable national framework supporting heterogeneous instruments
-                        for near real-time data flows with self-describing instruments, automated calibration, and
-                        human-in-the-loop override capabilities.</li>
-                </ul>
-            </section>
-
-            <br />
-
-            <section id="team" class="team sections-bg" style="border-radius: 0.5em; padding: 1em;">
-                <h4>Agent-Driven Data Management</h4>
-                <p>This approach shifts from passive data storage to intelligent systems where autonomous agents manage
-                    the full data lifecycle. Agents curate, validate, and share data across facilities while enforcing
-                    FAIR principles. Key challenges include schema variability, data quality assurance, privacy
-                    concerns, and the need for real-time processing.</p>
-                <ul>
-                    <li><strong>M5.</strong> Develop AI-driven metadata systems with automated annotation of
-                        experimental data in multiple domains, achieving high accuracy without human intervention.</li>
-                    <li><strong>M6.</strong> Deploy federated data mesh architecture with common APIs,
-                        cross-institutional discovery capabilities, and autonomous FAIR data governance.</li>
-                    <li><strong>M7.</strong> Implement near real-time data processing infrastructure supporting
-                        high-velocity scientific streams with automated quality assessment, provenance tracking, and
-                        regulatory compliance frameworks.</li>
-                </ul>
-            </section>
-
-            <br />
-
-            <section id="team" class="team sections-bg" style="border-radius: 0.5em; padding: 1em;">
-                <h4>AI Agent-Driven Autonomous Orchestration</h4>
-                <p>Intelligent agents coordinate experimental decisions using AI methods grounded in scientific
-                    knowledge. These agents integrate domain expertise, real-time data, and model-based reasoning to
-                    plan and execute workflows. Challenges include the probabilistic nature of AI models, ensuring
-                    scientific validity, and orchestrating across distributed, asynchronous systems.</p>
-                <ul>
-                    <li><strong>M8.</strong> Demonstrate hierarchical architectures in which LLM agents orchestrate
-                        traditional methods through domain-specific scientific interfaces, achieving significant
-                        speedups and experimental accuracy.</li>
-                    <li><strong>M9.</strong> Deploy a knowledge integration system with multiple facilities, propagating
-                        insights in real time to reduce experimental requirements and increase scientist approval of
-                        reasoning traces.</li>
-                </ul>
-            </section>
-
-            <br />
-
-            <section id="team" class="team sections-bg" style="border-radius: 0.5em; padding: 1em;">
-                <h4>Interoperable Agent Communication Interfaces and Standards</h4>
-                <p>To enable coordination between agents across institutions, standardized communication protocols are
-                    essential. These interfaces support asynchronous, secure, and fault-tolerant messaging while
-                    ensuring semantic interoperability across domains. Key challenges include diverse instrument
-                    protocols, security requirements, and reliable coordination at scale.</p>
-                <ul>
-                    <li><strong>M10.</strong> Deploy containerized agent microservices with standardized gRPC and AMQP
-                        communication protocols across multiple laboratory facilities, demonstrating cross-vendor
-                        instrument control and federated identity integration.</li>
-                    <li><strong>M11.</strong> Develop zero-trust communication infrastructure supporting autonomous
-                        agent coordination with sub-second latency, automatic failover, and continuous authentication.
-                    </li>
-                    <li><strong>M12.</strong> Demonstrate self-discovering agent networks using DNS-SD and distributed
-                        service registries, enabling dynamic reconfiguration and capability negotiation in
-                        geographically distributed facilities.</li>
-                </ul>
-            </section>
-
-            <br />
-
-            <section id="team" class="team sections-bg" style="border-radius: 0.5em; padding: 1em;">
-                <h4>Education and Workforce Development</h4>
-                <p>Preparing the next generation of scientists to work with autonomous systems requires rethinking
-                    education. Training must integrate AI and robotics with core scientific skills and emphasize
-                    human-AI collaboration, ethical reasoning, and system oversight. Key challenges include curriculum
-                    development, faculty expertise, and equitable access to hands-on learning.</p>
-                <ul>
-                    <li><strong>M13.</strong> Launch a national autonomous science education consortium that integrates
-                        NSF AI Institutes and DOE SciDAC programs with standardized autonomous laboratory collaboration
-                        curricula.</li>
-                    <li><strong>M14.</strong> Deploy educational infrastructure including immersive virtual laboratory
-                        environments, industry-academic partnership programs, and assessment methods for evaluating
-                        human-AI collaboration skills.</li>
-                </ul>
-            </section>
-
-            <br />
+<section class="section">
+  <div class="container">
+    <div class="grid-3">
+      <div>
+        <h2 class="section-title">Community roadmap for interconnected autonomous labs</h2>
+        <p class="section-intro">
+          This roadmap outlines a community-driven strategy to connect autonomous laboratories across institutions,
+          standardize interfaces for interoperability, and enable intelligent orchestration of experiments and data.
+          The goal is to build a national infrastructure for distributed, automated, and reproducible science.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://arxiv.org/pdf/2506.17510" target="_blank">Read the full paper</a>
+          <a class="btn btn-secondary" href="/reports">Related reports</a>
         </div>
-
-        <div class="col-lg-4">
-            <div class="blog-sidbar">
-                <h4>Roadmap Paper</h4>
-                <p style="padding: 1em;">
-                    Ferreira da Silva, Rafael, Milad Abolhasani, Dionysios A. Antonopoulos, Laura Biven, Ryan Coffee,
-                    Ian T. Foster, Leslie Hamilton et al. "A Grassroots Network and Community Roadmap for Interconnected
-                    Autonomous Science Laboratories for Accelerated Discovery." arXiv preprint <a
-                        href="https://arxiv.org/pdf/2506.17510" target="_blank"
-                        style="color: #6f0499">arXiv:2506.17510</a> (2025).
-                </p>
-            </div>
-        </div>
+      </div>
+      <div class="card">
+        <img src="/images/autonomous-science-overview.png" alt="Autonomous science roadmap" />
+      </div>
     </div>
-</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Roadmap pillars</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Instrument and cyberinfrastructure integration</h3>
+        <p>Enable agents to operate diverse scientific instruments and computational resources across institutions.</p>
+        <ul class="list-clean">
+          <li><strong>M1.</strong> Common integration interfaces with vendor-agnostic hardware abstraction.</li>
+          <li><strong>M2.</strong> End-to-end autonomous workflows across institutions and facilities.</li>
+          <li><strong>M3.</strong> Federated cyberinfrastructure with adaptive resource management and digital twins.</li>
+          <li><strong>M4.</strong> Scalable national framework for real-time data flows and human override.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Agent-driven data management</h3>
+        <p>Shift from passive storage to intelligent, agent-managed data lifecycles that enforce FAIR principles.</p>
+        <ul class="list-clean">
+          <li><strong>M5.</strong> AI-driven metadata systems with automated annotation.</li>
+          <li><strong>M6.</strong> Federated data mesh architecture with common APIs.</li>
+          <li><strong>M7.</strong> Real-time data processing with provenance tracking and compliance.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>AI agent-driven orchestration</h3>
+        <p>Agents coordinate experiments using AI methods grounded in scientific knowledge.</p>
+        <ul class="list-clean">
+          <li><strong>M8.</strong> Hierarchical agent architectures that orchestrate traditional methods.</li>
+          <li><strong>M9.</strong> Knowledge integration across facilities with real-time insight propagation.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Interoperable communication standards</h3>
+        <p>Standardize protocols for secure, fault-tolerant coordination between autonomous agents.</p>
+        <ul class="list-clean">
+          <li><strong>M10.</strong> Containerized agent microservices with gRPC/AMQP messaging.</li>
+          <li><strong>M11.</strong> Zero-trust communication infrastructure with continuous authentication.</li>
+          <li><strong>M12.</strong> Self-discovering agent networks with dynamic capability negotiation.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Education and workforce development</h3>
+        <p>Prepare scientists to collaborate with autonomous systems and oversee AI-driven workflows.</p>
+        <ul class="list-clean">
+          <li><strong>M13.</strong> National autonomous science education consortium.</li>
+          <li><strong>M14.</strong> Immersive virtual labs and human-AI collaboration assessment.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="card">
+      <h3>Roadmap paper</h3>
+      <p>
+        Ferreira da Silva, Rafael, Milad Abolhasani, Dionysios A. Antonopoulos, Laura Biven, Ryan Coffee, Ian T. Foster,
+        Leslie Hamilton et al. "A Grassroots Network and Community Roadmap for Interconnected Autonomous Science
+        Laboratories for Accelerated Discovery." arXiv preprint <a href="https://arxiv.org/pdf/2506.17510" target="_blank">arXiv:2506.17510</a> (2025).
+      </p>
+    </div>
+  </div>
+</section>

@@ -4,39 +4,44 @@ title: Collaborative Steering Council
 permalink: /steering-council
 ---
 
-<div class="container" data-aos="fade-up" style="padding: 3em 0;">
-    <div class="row">
-        <div class="col-lg-8 wg">
-            <p>
-                The Collaborative Steering Council serves as AISLE's (Autonomous Interconnected Science Lab Ecosystem)
-                primary governance body, composed of diverse representatives from participating organizations who share
-                equal decision-making authority. The Council's mission is to guide AISLE's strategic direction, foster
-                cross-institutional collaboration, establish shared technical standards, and ensure the network remains
-                aligned with its vision of accelerating scientific discovery through interconnected autonomous
-                laboratories. Council members collectively identify opportunities for innovation, allocate resources to
-                priority initiatives, and champion the expansion of the AISLE ecosystem while preserving the grassroots,
-                distributed nature of the network.
-            </p>
-            <br /><br />
-            <section id="team" class="team sections-bg" style="border-radius: 0.5em;">
-                <h4 style="padding-left: 0.5em;">Members</h4>
-                <div class="row gy-4">
-                    {% assign sc = site.data.steering_council | sort: "last_name" %}
-                    {% for m in sc %}
-                    <div class="col-xl-3 col-md-6 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-                        <div class="member">
-                            <img src="{{m.photo}}" class="img-fluid" alt="{{m.name}}">
-                            <h4 style="color: #2E1A47">{{m.first_name}} {{m.last_name}}</h4>
-                            <p>{{ m.expertise }}</p>
-                            <a href="{{ m.institution.link }}" target="_blank">
-                                <img src="{{ m.institution.image }}"
-                                    style="max-height: 2em; max-width: 8em; border-radius: 0;" />
-                            </a>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </section>
-        </div>
+<section class="section">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <h2 class="section-title">Steering council</h2>
+        <p class="section-intro">
+          The Steering Council guides AISLE's strategic direction, establishes shared technical standards, and ensures
+          the network remains aligned with its vision of accelerated scientific discovery through interconnected
+          autonomous laboratories.
+        </p>
+      </div>
+      <div class="card">
+        <h4>Responsibilities</h4>
+        <ul class="list-clean">
+          <li>Align cross-institution priorities</li>
+          <li>Champion interoperability standards</li>
+          <li>Guide collaborative investments</li>
+          <li>Maintain grassroots governance</li>
+        </ul>
+      </div>
     </div>
-</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid-3">
+      {% assign sc = site.data.steering_council | sort: "last_name" %}
+      {% for m in sc %}
+      <div class="card">
+        <img src="{{m.photo}}" alt="{{m.name}}" style="border-radius: 16px; margin-bottom: 1rem;">
+        <h4>{{m.first_name}} {{m.last_name}}</h4>
+        <p class="text-muted">{{ m.expertise }}</p>
+        <a href="{{ m.institution.link }}" target="_blank">
+          <img src="{{ m.institution.image }}" alt="{{ m.institution.name }}" style="max-height: 2em; max-width: 8em;">
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
