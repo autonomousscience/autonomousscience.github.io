@@ -32,10 +32,19 @@ permalink: /workshops
       {% assign workshops = site.workshops | sort: "date" | reverse %}
       {% for r in workshops %}
       <div class="card">
-        <p class="report-meta">{{r.publisher}}</p>
-        <h3><a href="{{r.url}}">{{r.title}}</a></h3>
-        <p class="text-muted">{{r.subtitle}}</p>
-        <p class="text-muted">{{r.event_date | date: "%d %B %Y"}}</p>
+        <div style="display: flex; gap: 1rem;">
+          {% if r.image %}
+          <div style="flex-shrink: 0;">
+            <img src="{{r.image}}" alt="{{r.title}}" style="width: 120px; border-radius: 8px; height: 100%; object-fit: cover;">
+          </div>
+          {% endif %}
+          <div>
+            <p class="report-meta">{{r.publisher}}</p>
+            <h3><a href="{{r.url}}">{{r.title}}</a></h3>
+            <p class="text-muted">{{r.subtitle}}</p>
+            <p class="text-muted">{{r.event_date | date: "%d %B %Y"}}</p>
+          </div>
+        </div>
       </div>
       {% endfor %}
     </div>
