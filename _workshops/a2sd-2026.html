@@ -11,6 +11,35 @@ event_room: Hall 10 - 1st Floor
 image: /images/workshops/a2sd-2026-banner.png
 ---
 
+<style>
+  .agenda .talk { display: flex; flex-direction: column; gap: 0.25rem; }
+  .agenda .talk-title { font-weight: 600; line-height: 1.35; }
+  .agenda .talk-speaker { font-size: 0.95em; color: #444; }
+  .agenda .talk-details { margin-top: 0.4rem; border-left: 3px solid #e3e3e3; padding: 0.2rem 0 0.2rem 0.75rem; }
+  .agenda .talk-details + .talk-details { margin-top: 0.35rem; }
+  .agenda .talk-details > summary {
+    cursor: pointer;
+    font-size: 0.85em;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .agenda .talk-details > summary::-webkit-details-marker { display: none; }
+  .agenda .talk-details > summary::before {
+    content: "▸";
+    display: inline-block;
+    font-size: 0.85em;
+    transition: transform 0.15s ease;
+  }
+  .agenda .talk-details[open] > summary::before { transform: rotate(90deg); }
+  .agenda .talk-details > p { margin: 0.5rem 0 0; font-size: 0.95em; line-height: 1.55; color: #333; }
+</style>
+
 <section class="section">
   <div class="container">
     <div class="row gy-4">
@@ -48,8 +77,18 @@ image: /images/workshops/a2sd-2026-banner.png
 
 
         <div class="card" style="margin-top: 1.5rem;">
-          <h3>Invited speakers <span style="font-size: 0.5em; color: #999">(Under Development)</span></h3>
+          <h3>Invited speakers</h3>
           <div class="grid-3" style="margin-top: 1rem;">
+            <div class="card">
+              <img src="https://randleslab.pratt.duke.edu/sites/randleslab.pratt.duke.edu/files/images/members/0278734.jpg" alt="Amanda Randles" style="border-radius: 12px; margin-bottom: 0.8rem;">
+              <strong>Amanda Randles</strong>
+              <p class="text-muted">Duke University</p>
+            </div>
+            <div class="card">
+              <img src="https://globalcomputing.group/assets/gcl-images/michela.jpg" alt="Michela Taufer" style="border-radius: 12px; margin-bottom: 0.8rem;">
+              <strong>Michela Taufer</strong>
+              <p class="text-muted">University of Tennessee Knoxville</p>
+            </div>
             <div class="card">
               <img src="/images/workshops/bussmann.jpg" alt="Michael Bussmann" style="border-radius: 12px; margin-bottom: 0.8rem;">
               <strong>Michael Bussmann</strong>
@@ -65,60 +104,95 @@ image: /images/workshops/a2sd-2026-banner.png
               <strong>Glenn Lockwood</strong>
               <p class="text-muted">VAST Data</p>
             </div>
-            <div class="card">
-              <img src="https://randleslab.pratt.duke.edu/sites/randleslab.pratt.duke.edu/files/images/members/0278734.jpg" alt="Amanda Randles" style="border-radius: 12px; margin-bottom: 0.8rem;">
-              <strong>Amanda Randles</strong>
-              <p class="text-muted">Duke University</p>
-            </div>
-
           </div>
         </div>
 
-        <!-- <div class="card" style="margin-top: 1.5rem;">
-          <h3>Program</h3>
+        <div class="card" style="margin-top: 1.5rem;">
+          <h3>Program <span style="font-size: 0.5em; color: #999">(Preliminary)</span></h3>
           <div class="agenda">
             <div class="agenda-item">
-              <div class="agenda-time">9:00 CET</div>
+              <div class="agenda-time">14:00 CET</div>
               <div><strong>Welcome and introductions</strong></div>
             </div>
             <div class="agenda-item">
-              <div class="agenda-time">9:00-9:20 CET</div>
-              <div>Data-Rich Autonomous Labs for Accelerated Materials and Molecular Discovery<br /><span class="text-muted">Milad Abolhasani, NCSU</span></div>
+              <div class="agenda-time">14:00-14:20 CET</div>
+              <div class="talk">
+                <div class="talk-title">Chronophysiomics: Autonomous Discovery Through Longitudinal Digital Twins</div>
+                <div class="talk-speaker">Amanda Randles <span class="text-muted">· Duke University</span></div>
+                <details class="talk-details">
+                  <summary>Abstract</summary>
+                  <p>Scientific discovery has traditionally relied on sparse snapshots of complex systems. In healthcare, this often means isolated measurements taken weeks or months apart despite disease progression occurring continuously over time. Advances in wearable sensing, multimodal data integration, artificial intelligence, and high performance computing are now enabling a new paradigm for continuous physiologic discovery through longitudinal digital twins.</p>
+                  <p>In this talk, I will present our work on large scale cardiovascular digital twins that integrate wearable data, imaging, electronic health records, and physics-based blood flow simulations to reconstruct physiologic trajectories across millions of heartbeats. Rather than treating physiology as a sequence of disconnected states, these approaches enable continuous modeling of evolving patient specific dynamics and cumulative biologic exposure over time.</p>
+                  <p>I will discuss how hybrid AI and physics-based approaches can support autonomous scientific inference, including biomarker discovery, counterfactual testing of interventions, and identification of subtle physiologic changes that are not observable through single time point measurements alone. Finally, I will highlight the computational challenges involved in scaling longitudinal digital twins across heterogeneous HPC architectures and discuss how these technologies may help shift healthcare from reactive treatment toward proactive and predictive care.</p>
+                </details>
+              </div>
             </div>
             <div class="agenda-item">
-              <div class="agenda-time">9:20-9:40 CET</div>
-              <div><a href="/files/workshops/a2sd-2025/BSC_ISC_1306_autonomous_labs_1.0.pdf" target="_blank">COMPSs: Task-based Approach to Autonomous Laboratories</a><br /><span class="text-muted">Rosa M. Badia, BSC</span></div>
+              <div class="agenda-time">14:20-14:40 CET</div>
+              <div class="talk">
+                <div class="talk-title">Autonomous Science Is Inheriting a Workflow Infrastructure Problem</div>
+                <div class="talk-speaker">Glenn Lockwood <span class="text-muted">· VAST Data</span></div>
+                <details class="talk-details">
+                  <summary>Abstract</summary>
+                  <p>Scientific workflow infrastructure was built for humans: a researcher submits a job, a scheduler dispatches it, and the researcher waits for results. Autonomous agents break that model entirely by continuously generating tasks and reacting to outcomes without waiting for instruction. As a result, autonomous workflows will quickly encounter a hard architectural limit that human-paced science rarely confronts: centralized orchestration does not scale horizontally.</p>
+                  <p>VAST Data faced this challenge while developing an event-driven workflow system for commercial applications, and we arrived at a simple design principle: event-driven orchestration should be the foundation, and centralized coordination should be reserved only for workflow segments that require it. Implementing this also required rethinking the underlying data infrastructure, particularly around durable event brokering and stateless function dispatch.</p>
+                  <p>In this talk, we present VAST's workflow system, the architectural choices behind it, and how it differs from traditional scientific workflow systems. We then invite discussion on where autonomous science diverges from commercial agentic workflows and what that implies for the infrastructure needs of autonomous science.</p>
+                </details>
+              </div>
             </div>
             <div class="agenda-item">
-              <div class="agenda-time">09:40-10:00 CET</div>
-              <div><a href="/files/workshops/a2sd-2025/20250613_LOTF_A2SD_Workshop.pdf" target="_blank">Scientific Labs of the Future: Creating an Ecosystem for Multi-Domain Science</a><br /><span class="text-muted">Rob Moore, ORNL</span></div>
+              <div class="agenda-time">14:40-15:00 CET</div>
+              <div class="talk">
+                <div class="talk-title">Unlocking Autonomy: Event-Driven Linked Data in Scientific Workflows</div>
+                <div class="talk-speaker">David Elbert <span class="text-muted">· John Hopkins University (JHU)</span></div>
+                <details class="talk-details">
+                  <summary>Abstract</summary>
+                  <p>A core dichotomy facing programmable cloud laboratories is that automation centers on stateless components for modularity while autonomy requires explicit system-level memory for reasoning, adaptation, and scientific meaning.  To scale autonomous discovery from individual instruments and isolated laboratories to distributed, multi-facility ecosystems will require embedding state, meaning, provenance, and authorization in workflows that cross computational and physical boundaries. In the AI for Materials Discovery Laboratory (AIMD-L) we approach this challenge through typed events enriched with persistent identifiers, schema validation, uncertainty descriptions, and semantic context. AIMD-L’s central, event-driven, linked-data layer converts data from a passive record into an active control surface to empower: workflow choreography; on-demand materialization of state; and human or agentic reasoning over linked evidence. This creates opportunities for distributed laboratory coordination without brittle, centralized control while turning laboratory events into shared scientific intelligence infrastructure.</p>
+                </details>
+              </div>
             </div>
             <div class="agenda-item">
-              <div class="agenda-time">10:00-10:20 CET</div>
-              <div>Maximizing Returns on Investment of the National Science Data Fabric: Driving Practical Impact and Sustainable Innovation<br /><span class="text-muted">Michela Taufer, UTK</span></div>
+              <div class="agenda-time">15:00-15:20 CET</div>
+              <div class="talk">
+                <div class="talk-title">TBA</div>
+                <div class="talk-speaker">Michael Bussmann <span class="text-muted">· Helmholtz-Zentrum Dresden-Rossendorf</span></div>
+              </div>
             </div>
             <div class="agenda-item">
-              <div class="agenda-time">10:20-10:40 CET</div>
-              <div>Self-Driving Laboratories and the Future of Autonomous Science<br /><span class="text-muted">John Shalf, LBNL</span></div>
+              <div class="agenda-time">15:20-15:40 CET</div>
+              <div class="talk">
+                <div class="talk-title">TBA</div>
+                <div class="talk-speaker">TBA <span class="text-muted">· TBA</span></div>
+              </div>
             </div>
             <div class="agenda-item">
-              <div class="agenda-time">10:40-11:00 CET</div>
-              <div>The Role of Computational Workflows in Experimental Workflows<br /><span class="text-muted">Ewa Deelman, USC</span></div>
+              <div class="agenda-time">15:40-16:00 CET</div>
+              <div class="talk">
+                <div class="talk-title">From Beamtime to Insight: An Open NSDF Pattern for Real-Time Adaptive Deformation Mapping</div>
+                <div class="talk-speaker">Michela Taufer <span class="text-muted">· University of Tennessee Knoxville</span></div>
+                <details class="talk-details">
+                  <summary>Abstract</summary>
+                  <p>Collaborators: Jack Marquez, Marshall McDonnell, Kin Hong NG, Lance Drane, Giorgio Scorzelli, Amy Gooch, Valerio Pascucci, Ray Gregory, Kaz Gofron, Bogdan Vacaliuc, Zach Thurman, Gregory Cage, Gavin Wiggins, Cody Stiner, Jesse McGaha, Andrew Ayres, Robert Smith, Greg Watson, Addi Malviya Thakur, Yuanpeng Zhang, Jue Liu, Stephen DeWitt, Ankit Shrivastava, Paul Laiu, Craig Bridges, Mathieu Doucet, Matt Tucker, Emily R Van Auken, Luke Daemen, Marie Backman, Darsh Dinger, Melanie Kirkham, Thomas Proffen, Austin McDannald, Gilad Kusne, William Ratcliff, Ben Mintz, Rob Moore</p>
+                  <p>Autonomous “closed-loop” experiments are becoming essential at large facilities, but they require reusable software patterns to move data across trusted boundaries, analyze results in real time, and safely steer instruments.</p>
+                  <p>ORNL and the National Science Data Fabric (under the leadership of the University of Tennessee and the University of Utah) are developing and deploying an adaptive strain-mapping workflow for X-ray scattering on wire-arc additive-manufactured parts at the CHESS Structural Materials Beamline. Experimental data stream through the National Science Data Fabric (NSDF) to computing resources, where INTERSECT@ORNL’s Distributed Active Learning (DIAL) builds a surrogate model and recommends the next measurement locations; the beamline executes them, and the loop repeats.</p>
+                  <p>This talk presents the end-to-end architecture, integration points, and potential “gotchas” (latency, metadata, provenance, and operator controls) so others can replicate the pattern for autonomous experiments and AI-ready pipelines across domains.</p>
+                </details>
+              </div>
             </div>
             <div class="agenda-item">
-              <div class="agenda-time">11:00-11:30 CET</div>
+              <div class="agenda-time">16:00-16:30 CET</div>
               <div><strong>Break</strong></div>
             </div>
             <div class="agenda-item">
-              <div class="agenda-time">11:30-12:00 CET</div>
+              <div class="agenda-time">16:30-17:00 CET</div>
               <div><strong>Panel with the presenters</strong></div>
             </div>
             <div class="agenda-item">
-              <div class="agenda-time">12:00-13:00 CET</div>
+              <div class="agenda-time">17:00-18:00 CET</div>
               <div><strong>Open discussions (drafting report)</strong></div>
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
 
       <div class="col-lg-4">
