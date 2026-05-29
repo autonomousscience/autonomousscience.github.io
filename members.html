@@ -1,0 +1,435 @@
+---
+layout: page
+title: Network Members
+subtitle: The researchers, engineers, and labs building the autonomous science fabric.
+permalink: /members
+---
+
+{% assign total = 0 %}
+{% for grp in site.data.members %}{% assign total = total | plus: grp.members.size %}{% endfor %}
+
+{% capture inst_blob %}{% for grp in site.data.members %}{% for m in grp.members %}{{ m.institution.name }}|{% endfor %}{% endfor %}{% endcapture %}
+{% assign inst_list = inst_blob | split: "|" %}
+{% assign unique_insts = inst_list | uniq %}
+{% assign inst_count = unique_insts.size | minus: 1 %}
+
+{% assign country_count = site.data.members.size %}
+
+<style>
+  /* ===== Stats strip ===== */
+  .mbr-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    margin-bottom: 2.5rem;
+  }
+  .mbr-stat {
+    background: var(--surface);
+    padding: 1.4rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .mbr-stat-num {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .mbr-stat-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-muted);
+    font-weight: 600;
+  }
+
+  /* ===== Filter bar ===== */
+  .mbr-filters {
+    position: sticky;
+    top: 72px;
+    z-index: 50;
+    background: rgba(243, 241, 238, 0.88);
+    backdrop-filter: blur(12px);
+    padding: 0.9rem 0;
+    margin: 0 -1rem 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .mbr-filter-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-muted);
+    font-weight: 700;
+    margin-right: 0.4rem;
+  }
+  .mbr-pill {
+    appearance: none;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    padding: 0.45rem 0.95rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: all 0.18s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: inherit;
+  }
+  .mbr-pill:hover { border-color: var(--ink); }
+  .mbr-pill[aria-pressed="true"] {
+    background: var(--ink);
+    color: #fff;
+    border-color: var(--ink);
+  }
+  .mbr-pill-count {
+    font-size: 0.75rem;
+    opacity: 0.65;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ===== Country sections ===== */
+  .mbr-country {
+    margin-bottom: 3.5rem;
+    transition: opacity 0.25s ease;
+  }
+  .mbr-country.is-hidden { display: none; }
+  .mbr-country-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .mbr-country-name {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  .mbr-country-meta {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-muted);
+    font-weight: 600;
+  }
+  .mbr-country-flag {
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+
+  /* ===== Member grid ===== */
+  .mbr-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .mbr-card {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.4rem 1.3rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    overflow: hidden;
+  }
+  .mbr-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-md);
+    padding: 1px;
+    background: linear-gradient(135deg, transparent, transparent);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    pointer-events: none;
+  }
+  .mbr-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-soft);
+  }
+  .mbr-card:hover::before { opacity: 1; }
+  .mbr-card.is-chair::before,
+  .mbr-card.is-steering::before {
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    opacity: 1;
+  }
+  .mbr-card.is-chair { box-shadow: 0 0 0 2px var(--accent); }
+
+  /* Monogram (replaces photo) */
+  .mbr-mono {
+    flex: 0 0 auto;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: -0.02em;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+  }
+  .mbr-mono::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 25%, rgba(255,255,255,0.35), transparent 60%);
+  }
+  .mbr-mono > span { position: relative; z-index: 1; }
+
+  /* Six rotating gradient styles for variety */
+  .mbr-mono.g0 { background: linear-gradient(135deg, #ff7a3c, #f2c94c); }
+  .mbr-mono.g1 { background: linear-gradient(135deg, #2bb9a6, #0c1324); }
+  .mbr-mono.g2 { background: linear-gradient(135deg, #1f2a44, #2bb9a6); }
+  .mbr-mono.g3 { background: linear-gradient(135deg, #f2c94c, #ff7a3c); }
+  .mbr-mono.g4 { background: linear-gradient(135deg, #ff7a3c, #1f2a44); }
+  .mbr-mono.g5 { background: linear-gradient(135deg, #2bb9a6, #f2c94c); }
+
+  .mbr-body { min-width: 0; flex: 1; }
+  .mbr-name {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 0 0 0.15rem;
+    letter-spacing: -0.01em;
+  }
+  .mbr-name a { color: inherit; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.15s; }
+  .mbr-name a:hover { border-color: var(--ink); }
+  .mbr-inst {
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+    line-height: 1.35;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    flex-wrap: wrap;
+  }
+  .mbr-inst a { color: inherit; }
+  .mbr-inst a:hover { color: var(--ink); }
+
+  .mbr-badge {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    font-size: 0.62rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.18rem 0.55rem;
+    border-radius: 999px;
+    color: #fff;
+  }
+  .mbr-badge.chair { background: var(--accent); }
+  .mbr-badge.steering { background: var(--ink); }
+
+  /* Empty state */
+  .mbr-empty {
+    text-align: center;
+    padding: 4rem 1rem;
+    color: var(--ink-muted);
+    display: none;
+  }
+  .mbr-empty.is-shown { display: block; }
+
+  /* CTA at bottom */
+  .mbr-cta {
+    margin-top: 3rem;
+    background: var(--ink);
+    color: #fff;
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .mbr-cta h3 { color: #fff; margin: 0; }
+  .mbr-cta p { margin: 0; color: rgba(255,255,255,0.7); }
+
+  @media (max-width: 640px) {
+    .mbr-filters { top: 60px; }
+    .mbr-card { padding: 1.1rem; }
+    .mbr-mono { width: 44px; height: 44px; font-size: 0.95rem; }
+  }
+</style>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Stats -->
+    <div class="mbr-stats">
+      <div class="mbr-stat">
+        <span class="mbr-stat-num" data-count="{{ total }}">{{ total }}</span>
+        <span class="mbr-stat-label">Members</span>
+      </div>
+      <div class="mbr-stat">
+        <span class="mbr-stat-num" data-count="{{ inst_count }}">{{ inst_count }}</span>
+        <span class="mbr-stat-label">Institutions</span>
+      </div>
+      <div class="mbr-stat">
+        <span class="mbr-stat-num" data-count="{{ country_count }}">{{ country_count }}</span>
+        <span class="mbr-stat-label">Countries</span>
+      </div>
+      <div class="mbr-stat">
+        <span class="mbr-stat-num">∞</span>
+        <span class="mbr-stat-label">Discoveries ahead</span>
+      </div>
+    </div>
+
+    <!-- Filter bar -->
+    <div class="mbr-filters" role="toolbar" aria-label="Filter members">
+      <span class="mbr-filter-label">View</span>
+      <button class="mbr-pill" data-filter="all" aria-pressed="true">
+        All <span class="mbr-pill-count">{{ total }}</span>
+      </button>
+      <button class="mbr-pill" data-filter="chair" aria-pressed="false">
+        Chair
+      </button>
+      <button class="mbr-pill" data-filter="steering" aria-pressed="false">
+        Steering Council
+      </button>
+      <span class="mbr-filter-label" style="margin-left: 0.6rem;">Country</span>
+      {% for grp in site.data.members %}
+      <button class="mbr-pill" data-filter="country" data-country="{{ grp.country | slugify }}" aria-pressed="false">
+        {{ grp.country }} <span class="mbr-pill-count">{{ grp.members.size }}</span>
+      </button>
+      {% endfor %}
+    </div>
+
+    <!-- Country sections -->
+    <div id="mbr-list">
+      {% for grp in site.data.members %}
+      <section class="mbr-country" data-country="{{ grp.country | slugify }}">
+        <header class="mbr-country-header">
+          <h2 class="mbr-country-name">{{ grp.country }}</h2>
+          <span class="mbr-country-meta">{{ grp.members.size }} member{% if grp.members.size != 1 %}s{% endif %}</span>
+        </header>
+        <div class="mbr-grid">
+          {% for m in grp.members %}
+            {% assign initials = m.first_name | slice: 0, 1 | append: m.last_name | slice: 0, 1 | upcase %}
+            {% assign grad_idx = forloop.index0 | modulo: 6 %}
+            {% assign role_class = "" %}
+            {% if m.role == 'chair' %}{% assign role_class = "is-chair" %}{% elsif m.role == 'steering' %}{% assign role_class = "is-steering" %}{% endif %}
+          <article class="mbr-card {{ role_class }}"
+                   data-role="{{ m.role | default: 'member' }}"
+                   data-country="{{ grp.country | slugify }}">
+            {% if m.role == 'chair' %}<span class="mbr-badge chair">Chair</span>
+            {% elsif m.role == 'steering' %}<span class="mbr-badge steering">Council</span>{% endif %}
+            <div class="mbr-mono g{{ grad_idx }}" aria-hidden="true"><span>{{ initials }}</span></div>
+            <div class="mbr-body">
+              <p class="mbr-name">
+                {% if m.link %}<a href="{{ m.link }}" target="_blank" rel="noopener">{{ m.first_name }} {{ m.last_name }}</a>
+                {% else %}{{ m.first_name }} {{ m.last_name }}{% endif %}
+              </p>
+              <p class="mbr-inst">
+                {% if m.institution.link %}<a href="{{ m.institution.link }}" target="_blank" rel="noopener">{{ m.institution.name }}</a>
+                {% else %}{{ m.institution.name }}{% endif %}
+              </p>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+      </section>
+      {% endfor %}
+      <p class="mbr-empty">No members match this filter.</p>
+    </div>
+
+    <div class="mbr-cta">
+      <h3>Join the Autonomous Science Network</h3>
+      <p>Researchers, engineers, and labs advancing interconnected autonomous discovery are welcome.</p>
+      <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSepojMFMmxssckSiNLs-sARhaWy_rPbvak_Ina_1_ksbGSqEA/viewform?usp=sharing" target="_blank">Become a member</a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  // Animated counters
+  const counters = document.querySelectorAll('.mbr-stat-num[data-count]');
+  const animate = (el) => {
+    const target = parseInt(el.dataset.count, 10);
+    if (!target || isNaN(target)) return;
+    const duration = 900;
+    const start = performance.now();
+    const step = (now) => {
+      const p = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased);
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { animate(e.target); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(c => io.observe(c));
+
+  // Filtering
+  const pills = document.querySelectorAll('.mbr-pill');
+  const sections = document.querySelectorAll('.mbr-country');
+  const cards = document.querySelectorAll('.mbr-card');
+  const empty = document.querySelector('.mbr-empty');
+
+  const apply = (filter, value) => {
+    let visible = 0;
+    sections.forEach(s => {
+      let sectionHasVisible = false;
+      const sectionCards = s.querySelectorAll('.mbr-card');
+      sectionCards.forEach(c => {
+        let show = true;
+        if (filter === 'chair') show = c.dataset.role === 'chair';
+        else if (filter === 'steering') show = c.dataset.role === 'steering' || c.dataset.role === 'chair';
+        else if (filter === 'country') show = c.dataset.country === value;
+        c.style.display = show ? '' : 'none';
+        if (show) { sectionHasVisible = true; visible++; }
+      });
+      s.classList.toggle('is-hidden', !sectionHasVisible);
+    });
+    empty.classList.toggle('is-shown', visible === 0);
+  };
+
+  pills.forEach(p => {
+    p.addEventListener('click', () => {
+      pills.forEach(x => x.setAttribute('aria-pressed', 'false'));
+      p.setAttribute('aria-pressed', 'true');
+      const f = p.dataset.filter;
+      if (f === 'all') apply('all');
+      else if (f === 'country') apply('country', p.dataset.country);
+      else apply(f);
+    });
+  });
+})();
+</script>

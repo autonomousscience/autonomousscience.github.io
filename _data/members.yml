@@ -1,0 +1,341 @@
+# Membership directory for the Autonomous Science Network, grouped by country.
+# Sources: Steering Council roster + "Become a Member" form responses.
+# Schema:
+#   - country: <name>
+#     members:
+#       - first_name, last_name        — required
+#         role                         — optional ("chair", "steering")
+#         link                         — optional personal website
+#         photo                        — optional avatar URL
+#         institution:
+#           name                       — required
+#           image                      — optional logo URL
+#           link                       — optional institution homepage
+
+- country: United States of America
+  members:
+    - first_name: Kinston
+      last_name: Ackölf
+      institution:
+        name: University of Utah
+
+    - first_name: Anas
+      last_name: AlSobeh
+      link: https://academics.siu.edu/computing-and-technology/information-technology/faculty/alsobeh-anas.php
+      institution:
+        name: Southern Illinois University Carbondale
+
+    - first_name: Fabio
+      last_name: Andrijauskas
+      link: https://www.linkedin.com/in/fabio-andrijauskas/
+      institution:
+        name: UC San Diego
+
+    - first_name: Dionysios A.
+      last_name: Antonopoulos
+      role: steering
+      link: https://www.anl.gov/profile/dionysios-a-antonopoulos
+      photo: https://www.anl.gov/sites/www/files/styles/profile_teaser_square_350px/public/Antonopoulos%20Dionysios%2032642D8_web.JPG?itok=8fYkLHBg
+      institution:
+        name: Argonne National Laboratory
+        image: https://www.alcf.anl.gov/sites/default/files/styles/large/public/2020-01/Argonne_cmyk_black.png?itok=-df89dHw
+        link: https://www.anl.gov/
+
+    - first_name: Majid
+      last_name: Beidaghi
+      link: https://beidaghi.com
+      institution:
+        name: University of Arizona
+
+    - first_name: Jean Luca
+      last_name: Bez
+      link: https://jeanlucabez.io
+      institution:
+        name: Lawrence Berkeley National Laboratory
+
+    - first_name: Laura
+      last_name: Biven
+      role: steering
+      photo: /images/laura-biven.jpg
+      institution:
+        name: Thomas Jefferson National Accelerator Facility
+        image: https://www.jlab.org/sites/default/files/logo_2.png
+        link: https://www.jlab.org/
+
+    - first_name: Caleb
+      last_name: Coatney
+      institution:
+        name: National Laboratory of the Rockies
+
+    - first_name: Ryan
+      last_name: Coffee
+      role: steering
+      link: https://profiles.stanford.edu/ryan-coffee
+      photo: https://media.licdn.com/dms/image/v2/C5603AQHztWFx5f_7eQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1634268379022?e=2147483647&v=beta&t=TQSxgf730nUiHusdqoXCh8Kvks82Rv6zu3hEdJ4xVwc
+      institution:
+        name: SLAC National Accelerator Laboratory
+        image: /images/slac-logo.png
+        link: https://www6.slac.stanford.edu/
+
+    - first_name: Rafael
+      last_name: Ferreira da Silva
+      role: chair
+      link: https://rafaelsilva.com
+      photo: https://rafaelsilva.com/assets/images/2022-rafael-ferreira-da-silva-high-resolution.jpg
+      institution:
+        name: Oak Ridge National Laboratory
+        image: https://workflows.community/images/institutions/ornl.png
+        link: https://www.ornl.gov/
+
+    - first_name: Ian T.
+      last_name: Foster
+      role: steering
+      link: https://www.anl.gov/profile/ian-t-foster
+      photo: https://www.anl.gov/sites/www/files/styles/profile_teaser_square_350px/public/Ian%20Foster%20400x400.jpg?h=b91dd37f&itok=M4oLBQbY
+      institution:
+        name: Argonne National Laboratory
+        image: https://www.alcf.anl.gov/sites/default/files/styles/large/public/2020-01/Argonne_cmyk_black.png?itok=-df89dHw
+        link: https://www.anl.gov/
+
+    - first_name: Leslie
+      last_name: Hamilton
+      role: steering
+      link: https://www.jhuapl.edu/about/people/leslie-hamilton
+      photo: https://www.jhuapl.edu/sites/default/files/2022-12/Hamilton_Leslie_106.jpg
+      institution:
+        name: Johns Hopkins Applied Physics Laboratory
+        image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTyxhJeL3NpHRZ48-Ngb6MwhAoTYTtJag9ZA&s
+        link: https://www.jhuapl.edu/
+
+    - first_name: Matthew
+      last_name: Hull
+      link: https://ictas.vt.edu/groupscentersandlabs/Matter-Labs.html
+      institution:
+        name: Virginia Tech
+
+    - first_name: Shantenu
+      last_name: Jha
+      role: steering
+      link: https://www.pppl.gov/people/shantenu-jha
+      photo: https://www.pppl.gov/sites/g/files/toruqf286/files/styles/1x1_750w_750h/public/2024-05/20240514shantenu_jha5k6a9660_2.jpg?h=d55ea86e&itok=9VgfaYhG
+      institution:
+        name: Princeton Plasma Physics Laboratory
+        image: https://w3.pppl.gov/communications/imagesStructured/Logos/PPPL/PPPL-LOGO-W-BALL-TRANSPARENT_1945_681.png
+        link: https://www.pppl.gov/
+
+    - first_name: Akbar
+      last_name: Kara
+      institution:
+        name: Ciena R&D
+
+    - first_name: Neeraj
+      last_name: Kumar
+      role: steering
+      link: https://www.pnnl.gov/people/neeraj-kumar-phd
+      photo: /images/neeraj-kumar.jpg
+      institution:
+        name: Pacific Northwest National Laboratory
+        image: https://www.pnnl.gov/images/pnnl_logo_battelle.png
+        link: https://www.pnnl.gov/
+
+    - first_name: Jeffrey
+      last_name: Law
+      institution:
+        name: National Laboratory of the Rockies
+
+    - first_name: Nam
+      last_name: Le
+      institution:
+        name: Johns Hopkins Applied Physics Laboratory
+
+    - first_name: Caitlin
+      last_name: Lewis
+      link: https://levf.org
+      institution:
+        name: Longevity Escape Velocity Foundation
+
+    - first_name: Ryan
+      last_name: Lewis
+      link: https://ryandlewis.dev
+      institution:
+        name: Argonne National Laboratory
+
+    - first_name: Tyler
+      last_name: Martin
+      link: https://www.nist.gov/people/tyler-martin
+      institution:
+        name: National Institute of Standards and Technology
+
+    - first_name: Theresa
+      last_name: Mayer
+      role: steering
+      link: https://www.cmu.edu/leadership/senior-admin/vp-bios/mayer-bio.html
+      photo: /images/theresa-mayer.jpg
+      institution:
+        name: Carnegie Mellon University
+        image: https://www.cmu.edu/brand/brand-guidelines/images/wordmarksquare-red-600x600.png
+        link: https://www.cmu.edu/
+
+    - first_name: Marshall
+      last_name: McDonnell
+      link: https://www.ornl.gov/staff-profile/marshall-mcdonnell
+      institution:
+        name: Oak Ridge National Laboratory
+
+    - first_name: Aarush
+      last_name: Mehrotra
+      link: https://aarush.studio/
+      institution:
+        name: UC San Diego / San Diego Supercomputer Center
+
+    - first_name: Ben
+      last_name: Mintz
+      role: steering
+      link: https://www.ornl.gov/staff-profile/ben-mintz
+      photo: /images/ben-mintz.jpg
+      institution:
+        name: Oak Ridge National Laboratory
+        image: https://workflows.community/images/institutions/ornl.png
+        link: https://www.ornl.gov/
+
+    - first_name: Rob
+      last_name: Moore
+      role: steering
+      link: https://www.ornl.gov/staff-profile/rob-g-moore-ii
+      photo: /images/rob-moore.jpg
+      institution:
+        name: Oak Ridge National Laboratory
+        image: https://workflows.community/images/institutions/ornl.png
+        link: https://www.ornl.gov/
+
+    - first_name: Juliane
+      last_name: Mueller
+      institution:
+        name: National Laboratory of the Rockies
+
+    - first_name: Jonathan
+      last_name: Ozik
+      institution:
+        name: Argonne National Laboratory
+
+    - first_name: Mateo
+      last_name: Petel
+      institution:
+        name: Stanford University
+
+    - first_name: Tresa
+      last_name: Pollock
+      link: https://labs.materials.ucsb.edu/pollock/tresa/
+      institution:
+        name: University of California, Santa Barbara
+
+    - first_name: Jose
+      last_name: Porras
+      institution:
+        name: National Laboratory of the Rockies
+
+    - first_name: Roger
+      last_name: Proksch
+      institution:
+        name: Oxford Instruments
+
+    - first_name: Daniel
+      last_name: Rosendo
+      link: https://danielrosendo.github.io/
+      institution:
+        name: Oak Ridge National Laboratory
+
+    - first_name: Josh
+      last_name: Sarles
+      link: https://ForceOS.ai
+      institution:
+        name: Force AI
+
+    - first_name: Malachi
+      last_name: Schram
+      institution:
+        name: Pacific Northwest National Laboratory
+
+    - first_name: Martin
+      last_name: Seifrid
+      link: https://ddomlab.org/
+      institution:
+        name: NC State University
+
+    - first_name: Maitreyee
+      last_name: Sharma Priyadarshini
+      link: https://sites.google.com/vt.edu/aadhaar/home
+      institution:
+        name: Virginia Tech
+
+    - first_name: Woong
+      last_name: Shin
+      link: https://woongshin.com
+      institution:
+        name: Oak Ridge National Laboratory
+
+    - first_name: Mitra
+      last_name: Taheri
+      role: steering
+      link: https://engineering.jhu.edu/dcg/about-pi/
+      photo: https://engineering.jhu.edu/materials/wp-content/uploads/2021/06/mitra-site-300x300.jpg
+      institution:
+        name: Johns Hopkins University
+        image: https://www.dankoarlington.com/wp-content/uploads/2018/04/JHU-Logo-Flat.jpg
+        link: https://engineering.jhu.edu/materials/
+
+    - first_name: Joshua
+      last_name: Tan
+      link: https://joshuatan.com/research
+      institution:
+        name: Harvard / Stanford
+
+    - first_name: Michela
+      last_name: Taufer
+      role: steering
+      link: https://globalcomputing.group/about.html
+      photo: https://globalcomputing.group/assets/gcl-images/michela.jpg
+      institution:
+        name: University of Tennessee, Knoxville
+        image: /images/utk-logo.png
+        link: https://www.eecs.utk.edu/
+
+    - first_name: Zachary
+      last_name: Trautt
+      institution:
+        name: National Institute of Standards and Technology
+
+    - first_name: John
+      last_name: Wu
+      link: https://profiles.lbl.gov/20161-john-wu/
+      institution:
+        name: Lawrence Berkeley National Laboratory
+
+- country: British Virgin Islands
+  members:
+    - first_name: James
+      last_name: Brodie
+      link: https://medium.com/id-theory/serendipity-on-steroids-f4aa21495ee0
+      institution:
+        name: Molecule
+
+- country: Germany
+  members:
+    - first_name: Ilia
+      last_name: Dorokhov
+      link: https://transforming-chemistry.org/en/landingpage/
+      institution:
+        name: CTC
+
+- country: Switzerland
+  members:
+    - first_name: Alex
+      last_name: Miloski
+      link: https://chat.aubr.ai/
+      institution:
+        name: VitaDAO & Aubrai
+
+    - first_name: Rafael
+      last_name: Rolli
+      institution:
+        name: EPFL
