@@ -311,6 +311,12 @@
       institution:
         name: Lawrence Berkeley National Laboratory
 
+    - first_name: Gaoyuan
+      last_name: Du
+      link: https://scholar.google.com/citations?user=ob5oPQkAAAAJ&hl=zh-CN
+      institution:
+        name: Amazon
+
 - country: British Virgin Islands
   members:
     - first_name: James
