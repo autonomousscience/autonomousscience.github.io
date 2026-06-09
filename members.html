@@ -336,7 +336,8 @@ permalink: /members
           <span class="mbr-country-meta">{{ grp.members.size }} member{% if grp.members.size != 1 %}s{% endif %}</span>
         </header>
         <div class="mbr-grid">
-          {% for m in grp.members %}
+          {% assign sorted_members = grp.members | sort_natural: "last_name" %}
+          {% for m in sorted_members %}
             {% assign initials = m.first_name | slice: 0, 1 | append: m.last_name | slice: 0, 1 | upcase %}
             {% assign grad_idx = forloop.index0 | modulo: 6 %}
             {% assign role_class = "" %}
