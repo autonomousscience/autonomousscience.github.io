@@ -345,3 +345,9 @@
       last_name: Rolli
       institution:
         name: EPFL
+
+    - first_name: Sukanya
+      last_name: Nath
+      link: https://www.dsl.unibe.ch/about/people_metadata/dr_nath_sukanya/
+      institution:
+        name: University of Bern
