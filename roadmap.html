@@ -8,19 +8,73 @@ permalink: /roadmap
   <div class="container">
     <div class="grid-3">
       <div>
-        <h2 class="section-title">Community roadmap for interconnected autonomous labs</h2>
+        <p class="kicker">A two-year community roadmap · July 2026</p>
+        <h2 class="section-title">Toward trustworthy autonomous science</h2>
         <p class="section-intro">
-          This roadmap outlines a community-driven strategy to connect autonomous laboratories across institutions,
-          standardize interfaces for interoperability, and enable intelligent orchestration of experiments and data.
-          The goal is to build a national infrastructure for distributed, automated, and reproducible science.
+          One year after the original AISLE roadmap, the field has moved faster than we anticipated. Multi-agent systems
+          have produced experimentally validated hypotheses, self-driving laboratories have grown markedly more
+          interoperable, and a national mobilization has placed autonomous experimentation at the center of U.S. federal
+          science strategy. Progress has also met a sobering counter-current: a flagship autonomous-discovery result was
+          corrected, benchmarks show agents completing only a small fraction of open-ended research, and no system has
+          yet made and experimentally self-validated a genuinely novel discovery end to end.
+        </p>
+        <blockquote class="pull-quote">
+          Producing a candidate discovery is no longer the hard part. Verifying it is.
+        </blockquote>
+        <p class="section-intro">
+          This asymmetry, more than raw model capability, is what limits autonomous science today. This roadmap
+          therefore organizes the community agenda around <strong>seven dimensions</strong> — the five we revisit, and
+          two we elevate from cross-cutting afterthoughts to first-class concerns — and scopes the path forward to a
+          deliberately short two-year horizon.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://arxiv.org/pdf/2506.17510" target="_blank">Read the full paper</a>
+          <a class="btn btn-primary" href="https://arxiv.org/abs/2607.12113" target="_blank">Read the full report</a>
           <a class="btn btn-secondary" href="/reports">Related reports</a>
         </div>
       </div>
       <div class="card">
-        <img src="/images/autonomous-science-overview.png" alt="Autonomous science roadmap" />
+        <img src="/images/reports/roadmap-2026.png" alt="Toward Trustworthy Autonomous Science report cover" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">What changed in a year</h2>
+    <p class="section-intro">
+      Seven shifts in the landscape bear directly on the original roadmap. We read them through two lenses: an
+      <strong>autonomy ladder</strong> that grades systems as tool, analyst, or scientist, and a persistent
+      <strong>capability–reliability gap</strong> between what systems can propose and what can be trusted.
+    </p>
+    <div class="grid-3">
+      <div class="card">
+        <h4>1. From isolated demonstrations to validated discoveries</h4>
+        <p>Multi-agent systems have generated hypotheses later confirmed in the laboratory — but humans still selected the problems and ran the experiments.</p>
+      </div>
+      <div class="card">
+        <h4>2. Self-driving laboratories enter a second generation</h4>
+        <p>SDL 2.0 aims to be interoperable, orchestrated, safe, and capable of hypothesis generation. Interoperability is the concrete advance so far.</p>
+      </div>
+      <div class="card">
+        <h4>3. The interface layer begins to consolidate</h4>
+        <p>MCP connects one agent to many tools; A2A connects agents to one another. Both moved under neutral governance, joined by an emerging skills layer.</p>
+      </div>
+      <div class="card">
+        <h4>4. Reasoning and foundation models as a new substrate</h4>
+        <p>Reasoning-trained LLMs approach expert performance on graduate-level science, and domain foundation models produce corroborated designs.</p>
+      </div>
+      <div class="card">
+        <h4>5. Benchmarks expose the capability–reliability gap</h4>
+        <p>Agents that rival experts on closed-ended questions complete only a small fraction of open-ended research. Reliability is the named obstacle in production.</p>
+      </div>
+      <div class="card">
+        <h4>6. Trust and governance move to the foreground</h4>
+        <p>A corrected discovery claim, a training-data leak, fabricated citations at leading venues, and unaddressed dual-use risk make these prerequisites.</p>
+      </div>
+      <div class="card">
+        <h4>7. Industry becomes a primary actor</h4>
+        <p>Well-capitalized entrants build robotic discovery laboratories at a pace public programs cannot match — supplying capital, but owing the same open interfaces and verification.</p>
       </div>
     </div>
   </div>
@@ -28,50 +82,98 @@ permalink: /roadmap
 
 <section class="section">
   <div class="container">
-    <h2 class="section-title">Roadmap pillars</h2>
+    <h2 class="section-title">Seven dimensions</h2>
+    <p class="section-intro">
+      The first five revisit and update the original AISLE dimensions in light of the past year. The last two are
+      elevated here from cross-cutting concerns to first-class dimensions of the roadmap.
+    </p>
     <div class="grid-2">
       <div class="card">
         <h3>Instrument and cyberinfrastructure integration</h3>
-        <p>Enable agents to operate diverse scientific instruments and computational resources across institutions.</p>
+        <p>
+          Vendor-neutral access to increasingly interoperable self-driving laboratories, with AI inference moving onto
+          the instruments themselves. Instruments, edge, HPC, cloud, and digital twins form a single distributed
+          cyber-physical system.
+        </p>
         <ul class="list-clean">
-          <li><strong>M1.</strong> Common integration interfaces with vendor-agnostic hardware abstraction.</li>
-          <li><strong>M2.</strong> End-to-end autonomous workflows across institutions and facilities.</li>
-          <li><strong>M3.</strong> Federated cyberinfrastructure with adaptive resource management and digital twins.</li>
-          <li><strong>M4.</strong> Scalable national framework for real-time data flows and human override.</li>
+          <li><strong>M1.</strong> Common instrument interfaces and vendor-agnostic hardware abstraction.</li>
+          <li><strong>M2.</strong> End-to-end workflows across institutions and facilities.</li>
+          <li><strong>M3.</strong> Open compute fabric with fault tolerance and digital twins.</li>
+          <li><strong>M4.</strong> Scalable national instrument framework.</li>
         </ul>
       </div>
       <div class="card">
         <h3>Agent-driven data management</h3>
-        <p>Shift from passive storage to intelligent, agent-managed data lifecycles that enforce FAIR principles.</p>
+        <p>
+          Provenance and quality enforced at the point of capture, where scarce data are made AI-ready by construction.
+          As campaigns generate data that humans never inspect, curation becomes a prerequisite for credible discovery
+          rather than after-the-fact bookkeeping.
+        </p>
         <ul class="list-clean">
           <li><strong>M5.</strong> AI-driven metadata systems with automated annotation.</li>
-          <li><strong>M6.</strong> Federated data mesh architecture with common APIs.</li>
-          <li><strong>M7.</strong> Real-time data processing with provenance tracking and compliance.</li>
+          <li><strong>M6.</strong> Federated data mesh with FAIR governance.</li>
+          <li><strong>M7.</strong> Near-real-time processing with AI provenance.</li>
         </ul>
       </div>
       <div class="card">
-        <h3>AI agent-driven orchestration</h3>
-        <p>Agents coordinate experiments using AI methods grounded in scientific knowledge.</p>
+        <h3>Agent-driven orchestration</h3>
+        <p>
+          Reasoning agents that plan and coordinate specialized scientific methods — and that explain why a result holds.
+          The orchestrator is one component of the ecosystem, not a replacement for the established methods it
+          coordinates.
+        </p>
         <ul class="list-clean">
-          <li><strong>M8.</strong> Hierarchical agent architectures that orchestrate traditional methods.</li>
-          <li><strong>M9.</strong> Knowledge integration across facilities with real-time insight propagation.</li>
+          <li><strong>M8.</strong> Hierarchical LLM orchestration with verification.</li>
+          <li><strong>M9.</strong> Cross-facility knowledge integration.</li>
         </ul>
       </div>
       <div class="card">
-        <h3>Interoperable communication standards</h3>
-        <p>Standardize protocols for secure, fault-tolerant coordination between autonomous agents.</p>
+        <h3>Interoperable agent interfaces</h3>
+        <p>
+          The consolidating MCP and A2A stack, now joined by an emerging skills layer. The lesson of the past year is to
+          standardize the interface while leaving the calling pattern free to evolve.
+        </p>
         <ul class="list-clean">
-          <li><strong>M10.</strong> Containerized agent microservices with gRPC/AMQP messaging.</li>
-          <li><strong>M11.</strong> Zero-trust communication infrastructure with continuous authentication.</li>
-          <li><strong>M12.</strong> Self-discovering agent networks with dynamic capability negotiation.</li>
+          <li><strong>M10.</strong> Standardized cross-vendor agent interfaces.</li>
+          <li><strong>M11.</strong> Zero-trust, sub-second agent coordination.</li>
+          <li><strong>M12.</strong> Self-discovering agent networks.</li>
         </ul>
       </div>
       <div class="card">
         <h3>Education and workforce development</h3>
-        <p>Prepare scientists to collaborate with autonomous systems and oversee AI-driven workflows.</p>
+        <p>
+          The judgment to resist the homogenizing pull of automation. AI-engaged researchers publish more and are cited
+          more, even as the range of topics the community collectively studies contracts.
+        </p>
         <ul class="list-clean">
           <li><strong>M13.</strong> National autonomous science education consortium.</li>
           <li><strong>M14.</strong> Immersive virtual labs and human-AI collaboration assessment.</li>
+        </ul>
+      </div>
+      <div class="card card-elevated">
+        <p class="kicker">Elevated to first-class</p>
+        <h3>Trust, verification, and reproducibility</h3>
+        <p>
+          Verification and validation across the lifecycle as a first-class requirement. Verification asks whether a
+          workflow was built and executed correctly; validation asks whether its result corresponds to physical reality —
+          the harder problem, where only measurement can settle the question.
+        </p>
+        <ul class="list-clean">
+          <li><strong>M15.</strong> Verification and validation across the experiment lifecycle.</li>
+          <li><strong>M16.</strong> Reproducibility and efficiency benchmark for autonomous workflows.</li>
+        </ul>
+      </div>
+      <div class="card card-elevated">
+        <p class="kicker">Elevated to first-class</p>
+        <h3>Safety, security, integrity, and governance</h3>
+        <p>
+          Screening and accountability where digital design meets physical execution. The autonomy granted to an agent
+          should match the cost, risk, and reversibility of the action it would take, and should be raised only as
+          auditable evidence of reliability accumulates.
+        </p>
+        <ul class="list-clean">
+          <li><strong>M17.</strong> Screening at the digital-to-physical interface.</li>
+          <li><strong>M18.</strong> Cross-institution agent identity and governance.</li>
         </ul>
       </div>
     </div>
@@ -80,13 +182,157 @@ permalink: /roadmap
 
 <section class="section section-alt">
   <div class="container">
-    <div class="card">
-      <h3>Roadmap paper</h3>
-      <p>
-        Ferreira da Silva, Rafael, Milad Abolhasani, Dionysios A. Antonopoulos, Laura Biven, Ryan Coffee, Ian T. Foster,
-        Leslie Hamilton et al. "A Grassroots Network and Community Roadmap for Interconnected Autonomous Science
-        Laboratories for Accelerated Discovery." arXiv preprint <a href="https://arxiv.org/pdf/2506.17510" target="_blank">arXiv:2506.17510</a> (2025).
-      </p>
+    <h2 class="section-title">Milestone scorecard</h2>
+    <p class="section-intro">
+      We assess each original AISLE milestone (M1–M14) against a year of evidence and add four new milestones (M15–M18)
+      for the elevated dimensions. Statuses are provisional and subject to confirmation against the cited evidence. We
+      intend this rescoring as a recurring practice rather than a one-off, so that the roadmap stays honest about what
+      has and has not been achieved.
+    </p>
+    <div class="table-scroll">
+      <table class="scorecard">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Milestone</th>
+            <th scope="col">Status</th>
+            <th scope="col">By</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">M1</th><td>Common instrument interfaces, HAL</td><td><span class="status status-partial">Partial</span></td><td>Y1</td></tr>
+          <tr><th scope="row">M2</th><td>End-to-end cross-institution workflows</td><td><span class="status status-partial">Partial</span></td><td>Y2</td></tr>
+          <tr><th scope="row">M3</th><td>Open compute fabric, fault tolerance, digital twins</td><td><span class="status status-open">Open</span></td><td>Y2</td></tr>
+          <tr><th scope="row">M4</th><td>Scalable national instrument framework</td><td><span class="status status-open">Open</span></td><td>Y2</td></tr>
+          <tr><th scope="row">M5</th><td>AI-driven metadata and annotation</td><td><span class="status status-partial">Partial</span></td><td>Y1</td></tr>
+          <tr><th scope="row">M6</th><td>Federated data mesh, FAIR governance</td><td><span class="status status-open">Open</span></td><td>Y2</td></tr>
+          <tr><th scope="row">M7</th><td>Near-real-time processing and AI provenance</td><td><span class="status status-partial">Partial</span></td><td>Y2</td></tr>
+          <tr><th scope="row">M8</th><td>Hierarchical LLM orchestration, verification</td><td><span class="status status-partial">Partial</span></td><td>Y1</td></tr>
+          <tr><th scope="row">M9</th><td>Cross-facility knowledge integration</td><td><span class="status status-open">Open</span></td><td>Y2</td></tr>
+          <tr><th scope="row">M10</th><td>Standardized cross-vendor agent interfaces</td><td><span class="status status-reframed">Reframed</span></td><td>Y1</td></tr>
+          <tr><th scope="row">M11</th><td>Zero-trust, sub-second agent coordination</td><td><span class="status status-open">Open</span></td><td>Y2</td></tr>
+          <tr><th scope="row">M12</th><td>Self-discovering agent networks</td><td><span class="status status-partial">Partial</span></td><td>Y2</td></tr>
+          <tr><th scope="row">M13</th><td>National education consortium</td><td><span class="status status-open">Open</span></td><td>Y1</td></tr>
+          <tr><th scope="row">M14</th><td>Virtual labs, human-AI assessment</td><td><span class="status status-open">Open</span></td><td>Y2</td></tr>
+          <tr><th scope="row">M15</th><td>Verification and validation across the lifecycle</td><td><span class="status status-new">New</span></td><td>Y1</td></tr>
+          <tr><th scope="row">M16</th><td>Reproducibility and efficiency benchmark</td><td><span class="status status-new">New</span></td><td>Y1</td></tr>
+          <tr><th scope="row">M17</th><td>Screening at digital-physical interface</td><td><span class="status status-new">New</span></td><td>Y1</td></tr>
+          <tr><th scope="row">M18</th><td>Cross-institution agent identity, governance</td><td><span class="status status-new">New</span></td><td>Y2</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-muted">
+      The pattern is consistent: the dimensions closest to raw model capability have advanced the fastest, while those
+      that require cross-institutional infrastructure, verification, and governance remain largely open. Orchestration
+      and agent interfaces moved the furthest. Data management, education, and the federated aspects of instrument
+      integration moved the least, because they depend on coordination that no single model improvement can supply.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">The two-year trajectory</h2>
+    <p class="section-intro">
+      The roadmap climbs the autonomy ladder from <strong>tool</strong> to <strong>analyst</strong> to
+      <strong>scientist</strong>, so that trustworthy autonomy rises to meet, rather than outrun, frontier model
+      capability. We keep the horizon short deliberately: at the current pace of change, a longer-range plan would be
+      obsolete before it could be acted upon.
+    </p>
+    <div class="grid-3">
+      <div class="card phase-card">
+        <p class="phase-time">0–8 months</p>
+        <h4>Interfaces and adoption</h4>
+        <ul class="list-clean">
+          <li>Vendor-agnostic interfaces <strong>(M1)</strong></li>
+          <li>MCP/A2A adoption <strong>(M10)</strong></li>
+        </ul>
+      </div>
+      <div class="card phase-card">
+        <p class="phase-time">8–16 months</p>
+        <h4>Data and the scaffolding of verification</h4>
+        <ul class="list-clean">
+          <li>AI-driven metadata <strong>(M5)</strong></li>
+          <li>Federated data mesh <strong>(M6)</strong></li>
+          <li>Verification and validation <strong>(M15)</strong></li>
+        </ul>
+      </div>
+      <div class="card phase-card">
+        <p class="phase-time">16–24 months</p>
+        <h4>Federation and governance</h4>
+        <ul class="list-clean">
+          <li>Zero-trust communications <strong>(M11)</strong></li>
+          <li>Self-discovering networks <strong>(M12)</strong></li>
+          <li>Agent identity and governance <strong>(M18)</strong></li>
+          <li>National framework <strong>(M4)</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <h2 class="section-title">The national and global ecosystem</h2>
+        <p class="section-intro">
+          The original roadmap argued for a grassroots, bottom-up network on the premise that no coordinated national
+          program existed to connect autonomous laboratories. That premise has partly changed. The Genesis Mission has
+          mobilized U.S. national laboratories around an integrated platform coupling HPC, scientific foundation models,
+          datasets, and automated laboratory systems, alongside the Trillion Parameter Consortium, the European strategy
+          for AI in science, and the Acceleration Consortium.
+        </p>
+        <p class="section-intro">
+          We argue that top-down mobilization and bottom-up coordination are complementary rather than redundant. Large
+          programs supply what a grassroots network cannot: compute at scale, foundation models, a security framing, and
+          funding at scale. A grassroots network, in turn, supplies what large programs and commercial vendors tend to
+          underweight — vendor-neutral interfaces and cross-institutional standards that keep each new program or
+          proprietary platform from becoming another silo.
+        </p>
+      </div>
+      <div class="card">
+        <h4>AISLE as interoperability fabric</h4>
+        <p>
+          An interconnected network such as AISLE is best understood not as an alternative to federal mobilization but as
+          the interoperability fabric and community-standards layer that allows these initiatives to connect to one
+          another and to the broader research community, rather than to interconnect only internally.
+        </p>
+        <p class="text-muted">
+          The milestones above should be read as community commitments that any of these programs can adopt, instrument,
+          and report against, rather than as the agenda of a single institution.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid-2">
+      <div class="card">
+        <h3>Roadmap report (2026)</h3>
+        <p>
+          R. Ferreira da Silva, M. Abolhasani, P. Beaucage, L. Biven, M. Bussmann, K. Chard, R. Coffee, S. DeWitt,
+          S. Dolas, C. Eckert, D. Elbert, I. T. Foster, T. Ghosal, A. Giannakou, T. Gibbs, L. Hamilton, G. Lockwood,
+          T. Mayer, B. Mintz, R. Nazikian, S. Nimer, A. Randles, W. Shin, S. R. Sukumar, F. Suter, M. Taheri, M. Taufer,
+          D. Vrabie. "Toward Trustworthy Autonomous Science: A Two-Year Community Roadmap." Technical Report,
+          ORNL/TM-2026/4663, Oak Ridge National Laboratory, July 2026.
+          <a href="https://arxiv.org/abs/2607.12113" target="_blank">arXiv:2607.12113</a>
+        </p>
+        <p class="text-muted">Licensed under CC BY 4.0.</p>
+      </div>
+      <div class="card">
+        <h3>The original roadmap (2025)</h3>
+        <p>
+          R. Ferreira da Silva, M. Abolhasani, D. A. Antonopoulos, L. Biven, R. Coffee, I. T. Foster, L. Hamilton,
+          S. Jha, T. Mayer, B. Mintz et al. "A Grassroots Network and Community Roadmap for Interconnected Autonomous
+          Science Laboratories for Accelerated Discovery." Workshop Proceedings of the 54th International Conference on
+          Parallel Processing, 2025, pp. 142–150.
+          <a href="https://arxiv.org/abs/2506.17510" target="_blank">arXiv:2506.17510</a>
+        </p>
+        <p class="text-muted">Establishes the AISLE network and the original milestones M1–M14, scored above.</p>
+      </div>
     </div>
   </div>
 </section>

@@ -455,6 +455,15 @@ a:hover {
   color: #fff;
 }
 
+.card.dark h1,
+.card.dark h2,
+.card.dark h3,
+.card.dark h4,
+.card.dark h5,
+.card.dark h6 {
+  color: #ffffff;
+}
+
 .card.dark p,
 .card.dark span {
   color: rgba(255, 255, 255, 0.72);
@@ -500,6 +509,13 @@ a:hover {
 
 .grid-4 {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+/* Wider tracks for cards whose headings are full dimension names. */
+.grid-dimensions {
+  display: grid;
+  gap: 1.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
 }
 
 /* Lists */
@@ -586,6 +602,115 @@ a:hover {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+}
+
+/* Roadmap */
+.pull-quote {
+  margin: 1.4rem 0;
+  padding: 0.2rem 0 0.2rem 1.2rem;
+  border-left: 4px solid var(--accent);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.card-elevated {
+  border-color: rgba(255, 122, 60, 0.45);
+  box-shadow: 0 0 0 1px rgba(255, 122, 60, 0.18), var(--shadow-soft);
+}
+
+.card-elevated .kicker {
+  color: var(--accent);
+}
+
+.phase-card .phase-time {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 1.4rem;
+}
+
+.scorecard {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.scorecard th,
+.scorecard td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(12, 19, 36, 0.08);
+  vertical-align: middle;
+}
+
+.scorecard thead th {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+  background: var(--surface-muted);
+}
+
+.scorecard tbody th {
+  font-weight: 700;
+  white-space: nowrap;
+  width: 1%;
+}
+
+.scorecard tbody tr:last-child th,
+.scorecard tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.status {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.status-partial {
+  background: #fdf3d4;
+  border-color: #b48c14;
+  color: #5c4600;
+}
+
+.status-open {
+  background: #eceef2;
+  border-color: #9aa3b4;
+  color: #414c63;
+}
+
+.status-reframed {
+  background: #d9f2ef;
+  border-color: #187a6d;
+  color: #0b4f47;
+}
+
+.status-new {
+  background: #ffe6d9;
+  border-color: #c5541a;
+  color: #8f3a14;
 }
 
 /* Footer */
