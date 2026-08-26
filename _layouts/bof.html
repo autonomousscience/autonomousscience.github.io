@@ -1,0 +1,111 @@
+---
+layout: page
+---
+{% comment %}
+BoF layout. The page body holds only the prose for the intro card; everything
+else is driven by front matter:
+
+  intro_title    Heading of the intro card (default: "Why this BoF matters")
+  topics         List of strings rendered as tags under the intro prose
+  image          Banner image shown below the intro card
+  image_alt      Alt text for the banner (default: the page title)
+  themes         List of strings rendered as the "Discussion themes" card
+  agenda         List of { time, title, talks: [ { title, speaker } ] }
+  event_logo     Logo shown at the top of the sidebar
+  event_location / event_date / event_time / event_room
+  links          List of { text, url, style: primary|secondary, external: true }
+  supporters     List of { name, logo, height }
+{% endcomment %}
+
+<section class="section">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-8">
+        <div class="card">
+          <h2>{{ page.intro_title | default: "Why this BoF matters" }}</h2>
+          {{ content }}
+          {% if page.topics %}
+          <div class="tag-row" style="margin-top: 1rem;">
+            {% for topic in page.topics %}
+            <span class="tag">{{ topic }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+
+        {% if page.image %}
+        <img src="{{ page.image }}" class="card" alt="{{ page.image_alt | default: page.title }}"
+          style="margin-top: 1.5rem;">
+        {% endif %}
+
+        {% if page.themes %}
+        <div class="card" style="margin-top: 1.5rem;">
+          <h3>Discussion themes</h3>
+          <ul class="list-marker">
+            {% for theme in page.themes %}
+            <li><span></span>
+              <div>{{ theme }}</div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+
+        {% if page.agenda %}
+        <div class="card" style="margin-top: 1.5rem;">
+          <h3>Agenda</h3>
+          <div class="agenda">
+            {% for item in page.agenda %}
+            <div class="agenda-item">
+              <div class="agenda-time">{{ item.time }}</div>
+              <div>
+                <strong>{{ item.title }}</strong>
+                {% if item.talks %}
+                <div class="agenda-talks">
+                  {% for talk in item.talks %}
+                  <div class="agenda-talk">
+                    <strong>{{ talk.title }}</strong><br />
+                    <span>{{ talk.speaker }}</span>
+                  </div>
+                  {% endfor %}
+                </div>
+                {% endif %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card" style="position: sticky; top: 2rem;">
+          {% if page.event_logo %}
+          <img src="{{ page.event_logo }}" alt="{{ page.title }} logo" style="max-width: 70%; margin-bottom: 1rem;">
+          {% endif %}
+          {% if page.event_location %}
+          <p><strong>{{ page.event_location }}</strong></p>
+          {% endif %}
+          <p>
+            Date: <strong>{{ page.event_date }}</strong><br />
+            Time: <strong>{{ page.event_time }}</strong><br />
+            Room: <strong>{{ page.event_room }}</strong>
+          </p>
+          {% for link in page.links %}{% capture link_attrs %}{% if link.external %} target="_blank"{% endif %}{% unless forloop.first %} style="margin-top: 0.6rem;"{% endunless %}{% endcapture %}
+          <a href="{{ link.url }}" class="btn btn-{{ link.style | default: 'primary' }}"{{ link_attrs }}>{{ link.text }}</a>
+          {% endfor %}
+          {% if page.supporters %}
+          <hr style="margin: 1.2rem 0;">
+          <h4>Supporters</h4>
+          <div class="grid-2" style="margin-top: 0.8rem;">
+            {% for supporter in page.supporters %}
+            <img src="{{ supporter.logo }}" alt="{{ supporter.name }}"
+              style="max-height: {{ supporter.height | default: '2.4em' }};">
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

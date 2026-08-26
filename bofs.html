@@ -29,14 +29,52 @@ permalink: /bofs
 <section class="section">
   <div class="container">
     <div class="grid-2">
-      {% assign bofs = site.bofs | sort: "date" | reverse %}
+      {% assign bofs = site.bofs | sort: "event_start" | reverse %}
+      {% assign today = site.time | date: "%s" | plus: 0 %}
       {% for r in bofs %}
-      <div class="card">
-        <p class="report-meta">{{r.publisher}}</p>
-        <h3><a href="{{r.url}}">{{r.title}}</a></h3>
-        <p class="text-muted">{{r.subtitle}}</p>
-        <p class="text-muted">{{r.event_date | date: "%d %B %Y"}}</p>
-      </div>
+      {% assign starts = r.event_start | date: "%s" | plus: 0 %}
+      <article class="card bof-card">
+        <a class="bof-media" href="{{ r.url }}">
+          {% if r.image %}
+          <img src="{{ r.image }}" alt="{{ r.title }}">
+          {% elsif r.event_logo %}
+          <span class="bof-media-plain"><img src="{{ r.event_logo }}" alt="{{ r.title }} conference logo"></span>
+          {% endif %}
+        </a>
+        <div class="bof-body">
+          <div class="bof-head">
+            {% if r.image and r.event_logo %}
+            <img class="bof-event-logo" src="{{ r.event_logo }}" alt="{{ r.title }} conference logo">
+            {% endif %}
+            {% if starts > today %}
+            <span class="bof-badge">Upcoming</span>
+            {% else %}
+            <span class="bof-badge is-past">Past session</span>
+            {% endif %}
+          </div>
+          <h3><a href="{{ r.url }}">{{ r.title }}</a></h3>
+          <p class="bof-subtitle">{{ r.subtitle }}</p>
+          <ul class="bof-meta">
+            <li><i class="bi bi-calendar-event"></i>
+              <span>{{ r.event_date }}{% if r.event_time and r.event_time != "TBA" %} &middot; {{ r.event_time }}{% endif %}</span>
+            </li>
+            {% if r.event_location %}
+            <li><i class="bi bi-geo-alt"></i><span>{{ r.event_location }}</span></li>
+            {% endif %}
+          </ul>
+          {% if r.topics %}
+          <div class="tag-row" style="margin-top: 0.4rem;">
+            {% for topic in r.topics limit: 3 %}
+            <span class="tag">{{ topic }}</span>
+            {% endfor %}
+            {% if r.topics.size > 3 %}
+            <span class="tag">+{{ r.topics.size | minus: 3 }} more</span>
+            {% endif %}
+          </div>
+          {% endif %}
+          <a class="bof-cta" href="{{ r.url }}">View session <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </article>
       {% endfor %}
     </div>
   </div>

@@ -604,6 +604,151 @@ a:hover {
   letter-spacing: 0.08em;
 }
 
+/* BoF cards */
+.bof-card {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bof-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-strong);
+}
+
+.bof-card a {
+  text-decoration: none;
+}
+
+.bof-media {
+  position: relative;
+  display: block;
+  border-bottom: 1px solid var(--border);
+}
+
+.bof-media img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* No banner image: center the conference logo on a tinted panel instead. */
+.bof-media-plain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--surface-muted), var(--surface-alt));
+}
+
+.bof-media-plain img {
+  width: auto;
+  max-height: 100px;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+/* Conference logo + status badge above the title. */
+.bof-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.bof-event-logo {
+  width: auto;
+  max-height: 34px;
+  object-fit: contain;
+}
+
+.bof-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  padding: 1.4rem 1.5rem 1.5rem;
+}
+
+.bof-body h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.bof-body h3 a:hover {
+  color: var(--accent);
+}
+
+.bof-subtitle {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.bof-badge {
+  align-self: flex-start;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(255, 122, 60, 0.14);
+  border: 1px solid rgba(255, 122, 60, 0.4);
+  color: #9c3405;
+}
+
+.bof-badge.is-past {
+  background: var(--surface-alt);
+  border-color: var(--border);
+  color: var(--ink-muted);
+}
+
+.bof-meta {
+  list-style: none;
+  display: grid;
+  gap: 0.35rem;
+  margin: 0.2rem 0 0;
+  padding: 0;
+}
+
+.bof-meta li {
+  display: flex;
+  gap: 0.55rem;
+  align-items: baseline;
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+}
+
+.bof-meta i {
+  color: var(--accent);
+}
+
+.bof-card .tag {
+  font-size: 0.78rem;
+  padding: 0.25rem 0.65rem;
+}
+
+.bof-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: auto;
+  padding-top: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.bof-cta i {
+  transition: transform 0.15s ease;
+}
+
+.bof-card:hover .bof-cta i {
+  transform: translateX(3px);
+}
+
 /* Roadmap */
 .pull-quote {
   margin: 1.4rem 0;
