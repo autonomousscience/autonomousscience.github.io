@@ -77,6 +77,33 @@
         image: /images/slac-logo.png
         link: https://www6.slac.stanford.edu/
 
+    - first_name: Ewa
+      last_name: Deelman
+      institution:
+        name: University of Southern California
+
+    - first_name: Stephen
+      last_name: DeWitt
+      institution:
+        name: Oak Ridge National Laboratory
+
+    - first_name: Gaoyuan
+      last_name: Du
+      link: https://scholar.google.com/citations?user=ob5oPQkAAAAJ&hl=zh-CN
+      institution:
+        name: Amazon
+
+    - first_name: David
+      last_name: Elbert
+      institution:
+        name: Johns Hopkins University
+
+    - first_name: Christian
+      last_name: Engelmann
+      link: https://www.christian-engelmann.info
+      institution:
+        name: Oak Ridge National Laboratory
+
     - first_name: Rafael
       last_name: Ferreira da Silva
       role: chair
@@ -96,6 +123,17 @@
         name: Argonne National Laboratory
         image: https://www.alcf.anl.gov/sites/default/files/styles/large/public/2020-01/Argonne_cmyk_black.png?itok=-df89dHw
         link: https://www.anl.gov/
+
+    - first_name: Maria
+      last_name: Gervais
+      institution:
+        name: Industry
+
+    - first_name: Tirthankar
+      last_name: Ghosal
+      link: https://www.tirthankarghosal.com
+      institution:
+        name: Oak Ridge National Laboratory
 
     - first_name: Leslie
       last_name: Hamilton
@@ -268,11 +306,23 @@
       institution:
         name: Virginia Tech
 
+    - first_name: Matthew
+      last_name: Shaxted
+      link: https://parallelworks.com/
+      institution:
+        name: Parallel Works
+
     - first_name: Woong
       last_name: Shin
       link: https://woongshin.com
       institution:
         name: Oak Ridge National Laboratory
+
+    - first_name: Mark
+      last_name: Stevens
+      link: https://azure.microsoft.com/en-us/solutions/discovery
+      institution:
+        name: Microsoft
 
     - first_name: Mitra
       last_name: Taheri
@@ -311,12 +361,6 @@
       institution:
         name: Lawrence Berkeley National Laboratory
 
-    - first_name: Gaoyuan
-      last_name: Du
-      link: https://scholar.google.com/citations?user=ob5oPQkAAAAJ&hl=zh-CN
-      institution:
-        name: Amazon
-
 - country: British Virgin Islands
   members:
     - first_name: James
@@ -327,11 +371,35 @@
 
 - country: Germany
   members:
+    - first_name: Michael
+      last_name: Bussmann
+      link: https://www.casus.science/computational-radiation-physics/
+      institution:
+        name: Helmholtz-Zentrum Dresden-Rossendorf
+
     - first_name: Ilia
       last_name: Dorokhov
       link: https://transforming-chemistry.org/en/landingpage/
       institution:
         name: CTC
+
+    - first_name: Mohammad Shafiqul
+      last_name: Islam
+      link: https://www.linkedin.com/in/mohammad-shafiqul-islam/
+      institution:
+        name: Karlsruhe Institute of Technology
+
+    - first_name: Ian Franson
+      last_name: Mendonca
+      institution:
+        name: Karlsruhe Institute of Technology
+
+- country: India
+  members:
+    - first_name: Abhishek
+      last_name: Jain
+      institution:
+        name: Fujitsu
 
 - country: Switzerland
   members:
@@ -341,13 +409,13 @@
       institution:
         name: VitaDAO & Aubrai
 
-    - first_name: Rafael
-      last_name: Rolli
-      institution:
-        name: EPFL
-
     - first_name: Sukanya
       last_name: Nath
       link: https://www.dsl.unibe.ch/about/people_metadata/dr_nath_sukanya/
       institution:
         name: University of Bern
+
+    - first_name: Rafael
+      last_name: Rolli
+      institution:
+        name: EPFL

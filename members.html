@@ -15,6 +15,16 @@ permalink: /members
 
 {% assign country_count = site.data.members.size %}
 
+{% comment %}
+  Country display order: most members first. Liquid cannot sort on a nested
+  property, so build a sortable key per country — (999 - member count) and the
+  data-file index, both zero-padded — and sort that. Subtracting from 999 makes
+  a plain ascending sort put the largest countries first while ties keep their
+  data-file (alphabetical) order.
+{% endcomment %}
+{% capture country_keys %}{% for grp in site.data.members %}{% assign inv = 999 | minus: grp.members.size %}{{ inv | prepend: "000" | slice: -3, 3 }}{{ forloop.index0 | prepend: "000" | slice: -3, 3 }},{% endfor %}{% endcapture %}
+{% assign country_order = country_keys | split: "," | sort %}
+
 <style>
   /* ===== Stats strip ===== */
   .mbr-stats {
@@ -320,7 +330,7 @@ permalink: /members
         Steering Council
       </button>
       <span class="mbr-filter-label" style="margin-left: 0.6rem;">Country</span>
-      {% for grp in site.data.members %}
+      {% for key in country_order %}{% assign idx = key | slice: 3, 3 | plus: 0 %}{% assign grp = site.data.members[idx] %}
       <button class="mbr-pill" data-filter="country" data-country="{{ grp.country | slugify }}" aria-pressed="false">
         {{ grp.country }} <span class="mbr-pill-count">{{ grp.members.size }}</span>
       </button>
@@ -329,7 +339,7 @@ permalink: /members
 
     <!-- Country sections -->
     <div id="mbr-list">
-      {% for grp in site.data.members %}
+      {% for key in country_order %}{% assign idx = key | slice: 3, 3 | plus: 0 %}{% assign grp = site.data.members[idx] %}
       <section class="mbr-country" data-country="{{ grp.country | slugify }}">
         <header class="mbr-country-header">
           <h2 class="mbr-country-name">{{ grp.country }}</h2>
