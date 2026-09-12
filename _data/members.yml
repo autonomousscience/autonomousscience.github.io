@@ -361,6 +361,12 @@
       institution:
         name: Lawrence Berkeley National Laboratory
 
+    - first_name: Jianyi
+      last_name: Yang
+      link: https://jyang-ai.github.io/
+      institution:
+        name: University of Houston
+
 - country: British Virgin Islands
   members:
     - first_name: James

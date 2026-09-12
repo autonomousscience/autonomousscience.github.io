@@ -25,19 +25,21 @@ permalink: /
         </div>
       </div>
       <div class="col-lg-5">
+        {% assign bof = site.bofs | where: "slug", "sc26" | first %}
         <div class="hero-panel">
           <span class="kicker">Upcoming event</span>
-          <h3 style="margin-top: 0.4rem;">A2SD-2026 Workshop</h3>
+          <h3 style="margin-top: 0.4rem;">{{ bof.title }}</h3>
           <p class="text-muted" style="margin-bottom: 0.8rem;">
-            2nd Advancing Autonomous Scientific Discovery Workshop — co-located with ISC High Performance 2026.
+            {{ bof.subtitle }} — a Birds of a Feather session at SC26.
           </p>
-          <img src="/images/workshops/a2sd-2026-banner.png" alt="A2SD-2026 banner"
-               style="width: 100%; border-radius: 12px; margin-bottom: 1rem;">
+          <div class="bof-media-plain" style="border-radius: 12px; margin-bottom: 1rem;">
+            <img src="{{ bof.event_logo }}" alt="SC26 logo">
+          </div>
           <ul class="list-clean" style="margin-bottom: 1rem;">
-            <li><strong>When:</strong> June 26, 2026 · 2:00pm–6:00pm CEST</li>
-            <li><strong>Where:</strong> Hamburg, Germany · Hall 10, 1st Floor</li>
+            <li><strong>When:</strong> {{ bof.event_date }} · {{ bof.event_time }}</li>
+            <li><strong>Where:</strong> {{ bof.event_location }}{% if bof.event_room and bof.event_room != "TBA" %} · {{ bof.event_room }}{% endif %}</li>
           </ul>
-          <a class="btn btn-primary" href="/workshops/a2sd-2026/">View workshop details</a>
+          <a class="btn btn-primary" href="{{ bof.url }}">View BoF details</a>
         </div>
       </div>
     </div>
