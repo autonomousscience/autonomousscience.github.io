@@ -12,8 +12,11 @@ else is driven by front matter:
   themes         List of strings rendered as the "Discussion themes" card
   agenda         List of { time, title, talks: [ { title, speaker } ] }
   event_logo     Logo shown at the top of the sidebar
-  event_location / event_date / event_time / event_room
-  links          List of { text, url, style: primary|secondary, external: true }
+  event_date     YYYY-MM-DD; formatted for display, and used on /bofs for
+                 ordering and the upcoming/past badge
+  event_location / event_time / event_room
+  links          List of { text, url, style: primary|secondary, external: true };
+                 an "All BoFs" button is always added after these
   supporters     List of { name, logo, height }
 {% endcomment %}
 
@@ -87,13 +90,14 @@ else is driven by front matter:
           <p><strong>{{ page.event_location }}</strong></p>
           {% endif %}
           <p>
-            Date: <strong>{{ page.event_date }}</strong><br />
+            Date: <strong>{{ page.event_date | date: "%B %-d, %Y" }}</strong><br />
             Time: <strong>{{ page.event_time }}</strong><br />
             Room: <strong>{{ page.event_room }}</strong>
           </p>
           {% for link in page.links %}{% capture link_attrs %}{% if link.external %} target="_blank"{% endif %}{% unless forloop.first %} style="margin-top: 0.6rem;"{% endunless %}{% endcapture %}
           <a href="{{ link.url }}" class="btn btn-{{ link.style | default: 'primary' }}"{{ link_attrs }}>{{ link.text }}</a>
           {% endfor %}
+          <a href="/bofs" class="btn btn-secondary"{% if page.links %} style="margin-top: 0.6rem;"{% endif %}>All BoFs</a>
           {% if page.supporters %}
           <hr style="margin: 1.2rem 0;">
           <h4>Supporters</h4>

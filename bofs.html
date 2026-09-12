@@ -29,10 +29,10 @@ permalink: /bofs
 <section class="section">
   <div class="container">
     <div class="grid-2">
-      {% assign bofs = site.bofs | sort: "event_start" | reverse %}
+      {% assign bofs = site.bofs | sort: "event_date" | reverse %}
       {% assign today = site.time | date: "%s" | plus: 0 %}
       {% for r in bofs %}
-      {% assign starts = r.event_start | date: "%s" | plus: 0 %}
+      {% assign starts = r.event_date | date: "%s" | plus: 0 %}
       <article class="card bof-card">
         <a class="bof-media" href="{{ r.url }}">
           {% if r.image %}
@@ -56,7 +56,7 @@ permalink: /bofs
           <p class="bof-subtitle">{{ r.subtitle }}</p>
           <ul class="bof-meta">
             <li><i class="bi bi-calendar-event"></i>
-              <span>{{ r.event_date }}{% if r.event_time and r.event_time != "TBA" %} &middot; {{ r.event_time }}{% endif %}</span>
+              <span>{{ r.event_date | date: "%B %-d, %Y" }}{% if r.event_time and r.event_time != "TBA" %} &middot; {{ r.event_time }}{% endif %}</span>
             </li>
             {% if r.event_location %}
             <li><i class="bi bi-geo-alt"></i><span>{{ r.event_location }}</span></li>

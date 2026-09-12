@@ -36,7 +36,7 @@ permalink: /
             <img src="{{ bof.event_logo }}" alt="SC26 logo">
           </div>
           <ul class="list-clean" style="margin-bottom: 1rem;">
-            <li><strong>When:</strong> {{ bof.event_date }} · {{ bof.event_time }}</li>
+            <li><strong>When:</strong> {{ bof.event_date | date: "%B %-d, %Y" }} · {{ bof.event_time }}</li>
             <li><strong>Where:</strong> {{ bof.event_location }}{% if bof.event_room and bof.event_room != "TBA" %} · {{ bof.event_room }}{% endif %}</li>
           </ul>
           <a class="btn btn-primary" href="{{ bof.url }}">View BoF details</a>
