@@ -407,6 +407,14 @@
       institution:
         name: Fujitsu
 
+- country: Italy
+  members:
+    - first_name: Iacopo
+      last_name: Colonnelli
+      link: https://glassofwhiskey.github.io/
+      institution:
+        name: University of Turin
+
 - country: Switzerland
   members:
     - first_name: Alex
