@@ -32,9 +32,14 @@ permalink: /
           <p class="text-muted" style="margin-bottom: 0.8rem;">
             {{ bof.subtitle }} — a Birds of a Feather session at SC26.
           </p>
+          {% if bof.image %}
+          <img src="{{ bof.image }}" alt="{{ bof.image_alt | default: bof.title }}"
+               style="width: 100%; border-radius: 12px; margin-bottom: 1rem;">
+          {% elsif bof.event_logo %}
           <div class="bof-media-plain" style="border-radius: 12px; margin-bottom: 1rem;">
-            <img src="{{ bof.event_logo }}" alt="SC26 logo">
+            <img src="{{ bof.event_logo }}" alt="{{ bof.title }} conference logo">
           </div>
+          {% endif %}
           <ul class="list-clean" style="margin-bottom: 1rem;">
             <li><strong>When:</strong> {{ bof.event_date | date: "%B %-d, %Y" }} · {{ bof.event_time }}</li>
             <li><strong>Where:</strong> {{ bof.event_location }}{% if bof.event_room and bof.event_room != "TBA" %} · {{ bof.event_room }}{% endif %}</li>
