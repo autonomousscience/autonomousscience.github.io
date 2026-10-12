@@ -251,6 +251,12 @@
       institution:
         name: National Laboratory of the Rockies
 
+    - first_name: Mark
+      last_name: Musen
+      link: https://gemstoneproject.org
+      institution:
+        name: Stanford University
+
     - first_name: Jonathan
       last_name: Ozik
       institution:
@@ -433,3 +439,10 @@
       last_name: Rolli
       institution:
         name: EPFL
+
+- country: United Kingdom
+  members:
+    - first_name: Sanskrit
+      last_name: Suthar
+      institution:
+        name: University of Manchester
