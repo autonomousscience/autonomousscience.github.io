@@ -578,6 +578,11 @@ a:hover {
   font-size: 0.9rem;
 }
 
+.agenda-speaker {
+  margin-top: 0.15rem;
+  font-size: 0.95em;
+}
+
 .agenda-talks {
   display: grid;
   gap: 0.7rem;

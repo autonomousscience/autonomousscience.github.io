@@ -10,7 +10,9 @@ else is driven by front matter:
   image          Banner image shown below the intro card
   image_alt      Alt text for the banner (default: the page title)
   themes         List of strings rendered as the "Discussion themes" card
-  agenda         List of { time, title, talks: [ { title, speaker } ] }
+  agenda         List of { time, title, speaker, talks: [ { title, speaker } ] }
+                 — `speaker` names a single presenter for the slot; within `talks`,
+                 `title` is optional, so a speaker with no title yet still renders
   event_logo     Logo shown at the top of the sidebar
   event_date     YYYY-MM-DD; formatted for display, and used on /bofs for
                  ordering and the upcoming/past badge
@@ -63,12 +65,16 @@ else is driven by front matter:
               <div class="agenda-time">{{ item.time }}</div>
               <div>
                 <strong>{{ item.title }}</strong>
+                {% if item.speaker %}
+                <div class="text-muted agenda-speaker">{{ item.speaker }}</div>
+                {% endif %}
                 {% if item.talks %}
                 <div class="agenda-talks">
                   {% for talk in item.talks %}
                   <div class="agenda-talk">
-                    <strong>{{ talk.title }}</strong><br />
+                    {% if talk.title %}<strong>{{ talk.title }}</strong><br />
                     <span>{{ talk.speaker }}</span>
+                    {% else %}<strong>{{ talk.speaker }}</strong>{% endif %}
                   </div>
                   {% endfor %}
                 </div>
