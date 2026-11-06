@@ -198,6 +198,12 @@
       institution:
         name: Argonne National Laboratory
 
+    - first_name: Han
+      last_name: Liu
+      link: https://magics.cs.northwestern.edu/people.html
+      institution:
+        name: Northwestern University
+
     - first_name: Tyler
       last_name: Martin
       link: https://www.nist.gov/people/tyler-martin
@@ -361,6 +367,12 @@
       institution:
         name: National Institute of Standards and Technology
 
+    - first_name: Sean
+      last_name: Wilkinson
+      link: https://www.ornl.gov/staff/sean-r-wilkinson/
+      institution:
+        name: Oak Ridge National Laboratory
+
     - first_name: John
       last_name: Wu
       link: https://profiles.lbl.gov/20161-john-wu/
@@ -431,7 +443,7 @@
 
     - first_name: Sukanya
       last_name: Nath
-      link: https://www.dsl.unibe.ch/about/people_metadata/dr_nath_sukanya/
+      link: https://sukanyanath1.github.io
       institution:
         name: University of Bern
 
