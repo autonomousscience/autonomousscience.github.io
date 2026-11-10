@@ -596,6 +596,41 @@ a:hover {
   border: 1px solid rgba(12, 19, 36, 0.08);
 }
 
+.agenda-abstract {
+  margin-top: 0.6rem;
+  border-left: 3px solid var(--border);
+  padding: 0.1rem 0 0.1rem 0.75rem;
+}
+
+.agenda-abstract > summary {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-muted);
+  list-style: none;
+}
+
+.agenda-abstract > summary::-webkit-details-marker { display: none; }
+
+.agenda-abstract > summary::before {
+  content: "\25B8";
+  transition: transform 0.15s ease;
+}
+
+.agenda-abstract[open] > summary::before { transform: rotate(90deg); }
+
+.agenda-abstract > p {
+  margin: 0.5rem 0 0;
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
 /* Report cards */
 .report-card img {
   border-radius: var(--radius-sm);

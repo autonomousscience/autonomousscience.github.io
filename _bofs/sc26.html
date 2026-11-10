@@ -32,9 +32,29 @@ agenda:
     talks:
       - title: View from DOE on Autonomous Science and Robotics
         speaker: Ravinder Kapoor, U.S. Department of Energy
-      - speaker: Michela Taufer, University of Tennessee, Knoxville
+      - title: What Would It Take to Connect Your Facility to an Autonomous Experiment?
+        speaker: Michela Taufer, University of Tennessee, Knoxville
       - speaker: Tom Gibbs, NVIDIA
-      - speaker: Arvind Ramanathan, Argonne National Laboratory
+      - title: Lessons learned from experiments in long horizon agentic scaling for bio design
+        speaker: Arvind Ramanathan, Argonne National Laboratory
+        abstract: >-
+          Agentic systems that run for days across hundreds of tool calls have become the primary vehicle through
+          which our group designs enzymes and protein binders, and this talk reports what we have learned from
+          scaling them on leadership-class systems. Our team has been running long-horizon agentic design
+          campaigns across more than a dozen enzyme and protein targets, coupling genome-scale language models,
+          structure prediction, physics-based simulation, and automated experimental characterization under a
+          single orchestration layer. What we find is that the agent performance does not degrade uniformly with
+          horizon length, however, failures concentrate at the hand-off points between reasoning and simulation,
+          and recovery depends more on how evidence is accumulated and reused across a campaign than on the
+          capability of the underlying model. Campaigns that carry structured evidence forward narrow the tool and
+          hypothesis search space enough to change throughput, which argues for treating accumulated evidence as a
+          first-class system component rather than a logging artifact. Scaling throughput exposed infrastructure
+          assumptions that HPC centers do not currently satisfy, among them persistent agent state across job
+          boundaries, inference serving co-scheduled with simulation, and provenance sufficient to reproduce a
+          multi-week design trajectory. Experimental validation rather than compute remains the binding
+          constraint, which changes what an agentic system should be optimized for and where the next round of
+          engineering effort belongs. We close with the open questions we have not resolved, including how to
+          evaluate a design campaign whose ground truth arrives months after the computation ends.
       - speaker: Ioannis Xiotidis, CERN
   - time: 1:05pm CST
     title: Open Discussion
