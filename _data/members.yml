@@ -186,6 +186,12 @@
       institution:
         name: Johns Hopkins Applied Physics Laboratory
 
+    - first_name: Geoffrey
+      last_name: Lentner
+      link: https://www.rcac.purdue.edu/about/staff/glentner
+      institution:
+        name: Purdue University / Rosen Center for Advanced Computing
+
     - first_name: Caitlin
       last_name: Lewis
       link: https://levf.org
