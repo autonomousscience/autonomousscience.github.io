@@ -77,6 +77,11 @@
         image: /images/slac-logo.png
         link: https://www6.slac.stanford.edu/
 
+    - first_name: Shelaine
+      last_name: Curd
+      institution:
+        name: Oak Ridge National Laboratory
+
     - first_name: Ewa
       last_name: Deelman
       institution:
@@ -124,6 +129,12 @@
         image: https://www.alcf.anl.gov/sites/default/files/styles/large/public/2020-01/Argonne_cmyk_black.png?itok=-df89dHw
         link: https://www.anl.gov/
 
+    - first_name: Gilles
+      last_name: Frydman
+      link: https://circadian.news
+      institution:
+        name: Synambix
+
     - first_name: Maria
       last_name: Gervais
       institution:
@@ -134,6 +145,11 @@
       link: https://www.tirthankarghosal.com
       institution:
         name: Oak Ridge National Laboratory
+
+    - first_name: Guimu
+      last_name: Guo
+      institution:
+        name: Rowan University
 
     - first_name: Leslie
       last_name: Hamilton
@@ -203,6 +219,11 @@
       link: https://ryandlewis.dev
       institution:
         name: Argonne National Laboratory
+
+    - first_name: Mengnan
+      last_name: Li
+      institution:
+        name: Idaho National Laboratory
 
     - first_name: Han
       last_name: Liu
@@ -431,6 +452,12 @@
       institution:
         name: Fujitsu
 
+    - first_name: Priyanka
+      last_name: Sharma
+      link: https://www.linkedin.com/in/drpriyankasharma
+      institution:
+        name: Fujitsu Research
+
 - country: Italy
   members:
     - first_name: Iacopo
@@ -438,6 +465,13 @@
       link: https://glassofwhiskey.github.io/
       institution:
         name: University of Turin
+
+- country: Netherlands
+  members:
+    - first_name: Tim
+      last_name: Kok
+      institution:
+        name: SURF
 
 - country: Switzerland
   members:
@@ -457,6 +491,11 @@
       last_name: Rolli
       institution:
         name: EPFL
+
+    - first_name: Ioannis
+      last_name: Xiotidis
+      institution:
+        name: CERN
 
 - country: United Kingdom
   members:
